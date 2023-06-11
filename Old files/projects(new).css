@@ -1,0 +1,118 @@
+body{
+	margin:0px;
+	background-image: url("imagess/bg.png");
+	background-repeat: repeat;
+	background-attachment: fixed;
+
+}
+#navbar{
+	position: fixed;
+    top:0;
+	z-index: 10;
+	height: 15vmin;
+	width: 100vw;
+	/*background-color: #000024;*/
+	margin:0px 0px 0px 0px;
+	box-shadow: 0px 0.2vmin 3vmin #00fffc;
+	background: radial-gradient(ellipse,#121243,#121223);
+	background: -moz-radial-gradient(ellipse,#121243,#121223);
+	background: -ms-radial-gradient(ellipse,#121243,#121223);
+	background: -webkit-radial-gradient(ellipse,#121243,#121223);
+	background: -o-radial-gradient(ellipse,#121243,#121223);
+}
+
+#navlogo{
+	position: relative;
+	float: left;
+	top: 4vmin;
+	left: 4vmin;
+	width: 14vmin;
+	height: auto;
+}
+
+#navitems{
+	position: relative;
+	top: 3vmin;
+	float:right;
+	font-size: 2.5vmin;
+	justify-content: center;
+}
+
+ul{
+    list-style: none;   
+}
+
+#navitems li{
+	float:left;
+	padding-right: 5vmin;
+}
+
+#navitems a:hover{
+	color: #121280;
+	text-shadow: 1px 1px white;
+}
+
+#navitems a{
+	text-decoration: none;
+	color: #00fffc;
+	text-shadow: 1px 1px white;
+}
+
+#content h1{
+    margin-top: 17vmin;
+    font-size: 7vmin;
+	color: #121299;
+	text-shadow: 2px 2px #808099;
+}
+
+#content h1::after
+{
+	content: '';
+	background: #007bff;
+	display: block;
+	height: 2px;
+	width: 20vw;
+	margin: 20px auto 5px;
+	box-shadow: 1px 0.5vmin 1vmin white;
+}
+
+#text{
+	width: 80vw;
+	margin-left: 10vw;
+	font-size: 3vmin;
+	text-align: justify;
+	line-height: 5vmin;
+    color: rgb(145, 145, 145);
+    padding-bottom: 7vmin;
+}
+
+#table{
+	width: 80vw;
+	background-color: #020220;
+	margin-left:10vw;
+	height: auto;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+}
+
+#table table{
+	width: 75vw;
+	border: #007bff 1px solid;
+	margin: 2.5vw;
+	color: rgb(145, 145, 145);
+}
+
+#table table th{
+	border:#007bff 1px solid;
+	background-color:#0c2ad146 ;
+	padding: 10px;
+	font-size: 3vmin;
+}
+
+#table table td{
+	border:#86c5ff 1px solid;
+	background-color:#191c2c46 ;
+	padding: 7px;
+	font-size: 3vmin;
+	text-align: center;
+}

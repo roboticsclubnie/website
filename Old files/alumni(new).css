@@ -1,0 +1,112 @@
+body{
+	margin:0px;
+	background-image: url("imagess/bg.png");
+	background-repeat: repeat;
+	background-attachment: fixed;
+
+}
+#navbar{
+	position: fixed;
+    top:0;
+	z-index: 10;
+	height: 15vmin;
+	width: 100vw;
+	/*background-color: #000024;*/
+	margin:0px 0px 0px 0px;
+	box-shadow: 0px 0.2vmin 3vmin #00fffc;
+	background: radial-gradient(ellipse,#121243,#121223);
+	background: -moz-radial-gradient(ellipse,#121243,#121223);
+	background: -ms-radial-gradient(ellipse,#121243,#121223);
+	background: -webkit-radial-gradient(ellipse,#121243,#121223);
+	background: -o-radial-gradient(ellipse,#121243,#121223);
+}
+
+#navlogo{
+	position: relative;
+	float: left;
+	top: 4vmin;
+	left: 4vmin;
+	width: 14vmin;
+	height: auto;
+}
+
+#navitems{
+	position: relative;
+	top: 3vmin;
+	float:right;
+	font-size: 2.5vmin;
+	justify-content: center;
+}
+
+ul{
+    list-style: none;   
+}
+
+#navitems li{
+	float:left;
+	padding-right: 5vmin;
+}
+
+#navitems a:hover{
+	color: #121280;
+	text-shadow: 1px 1px white;
+}
+
+#navitems a{
+	text-decoration: none;
+	color: #00fffc;
+	text-shadow: 1px 1px white;
+}
+
+#content h1{
+    margin-top: 17vmin;
+    font-size: 7vmin;
+	color: #121299;
+	text-shadow: 2px 2px #808099;
+}
+
+#content h1::after
+{
+	content: '';
+	background: #007bff;
+	display: block;
+	height: 2px;
+	width: 20vw;
+	margin: 20px auto 5px;
+	box-shadow: 1px 0.5vmin 1vmin white;
+}
+
+#cont{
+	width: 82vw;
+	margin-left: 8vw;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	flex-shrink: 1;
+	align-content: space-between;
+	justify-content: space-evenly;
+}
+
+#cont img{
+	width: 22vw;
+	height: 22vw;
+	margin: 1.5vw;
+	border: #00fffc 1px solid;
+	min-width: 175px;
+}
+
+#cont p{
+	text-align: center;
+	color: #00fffc;
+	padding-bottom: 1vw;;
+}
+#Aluminus{
+	background-color: #020220;
+	width: 25vw;
+	border: #00fffc 1px solid;
+	float: left;
+	min-width: 200px;
+	margin-top: 2vw;
+	margin-left: 2vw;
+	justify-content: center;
+}

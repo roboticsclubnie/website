@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Robotics Club, NIE</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes" />
+	<meta name="keywords" content="Robotics, club, NIE" />
+
+	<!-- SONO FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	
+	<!-- OSWALD FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+
+	<!-- SPACE GROTESK FONT-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="index.css">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+
+<body onload="startTimer()">
+
+	<!-- Preloader -->
+	<div class="preloader" id="preloader">
+		<img id="preloader-logo" src="images/Logo.png" loading="lazy">
+	</div>
+
+	<!-- Navbar and Intro -->
+	<nav class="navbar navbar-expand-lg" id="custom-navbar">
+		<a id="navlogo" href="#"><img src="images/Logo.png" loading="lazy"></a> 
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span><img src="images/ham_menu.png" alt="..." loading="lazy"></span>
+		</button>
+		<div class="navitems collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav" id="unlist">
+			<li>
+			  <a class="animate__animated animate__fadeInUp animate__delay-3s" href="rikishi.html">Roborikishi'22</a>
+			</li>
+			<li>
+			  <a class="animate__animated animate__fadeInUp animate__delay-4s" href="#2">Gallery</a>
+			</li>
+			<li>
+			  <a class="animate__animated animate__fadeInUp animate__delay-5s" href="#3">Contact us</a>
+			</li>
+		  </ul>
+		</div>
+	</nav>
+
+	<!-- Intro -->
+	<div id="intro">
+
+		<div class="flex-wrapper">
+			<div id="club" class="animate__animated animate__fadeInUp animate__delay-4s">
+				<div class="headquote">
+					<div class="head">
+						<p id="head">Robotics club, NIE</p>
+					</div>
+					<div class="QMark">
+						<img id="QMark" src="images/QuotationMark2.png" loading="lazy">
+					</div>
+				</div>
+				<div class="contents">
+					<p id="quote">
+						<justified>
+							At bottom, Robotics is about us. It is the Discipline of emulating our lives, of wondering how we
+							work.
+						</justified>
+					</p>
+					<p id="quoteauth">-Rod Grupen</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex-wrapper2 animate__animated animate__fadeInUp animate__delay-5s">
+			<div id="carouselIndicators" class="carousel slide images custom-resize" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active item">
+					<img src="images/carousel/L1.JPG" class="d-block w-100 custom-image" alt="..." loading="lazy">
+					</div>
+					<div class="carousel-item">
+					<img src="images/carousel/IMG_6110.JPG" class="d-block w-100 custom-image" alt="..." loading="lazy">
+					</div>
+					<div class="carousel-item">
+					<img src="images/carousel/IMG_6107.JPG" class="d-block w-100 custom-image" alt="..." loading="lazy">
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+
+
+		<div class="animateLogo">
+			<img id="logo" src="images/Logo.png" loading="lazy">
+		</div>
+
+		<div class="topTriangle-withoutTransparencychange"></div>
+	</div>
+
+	<!-- About Section -->
+	<div class="About" id="About">
+		<div class="title">
+			<h1>About Us</h1>
+		</div>
+
+		<div class="separator"></div>
+
+		<div class="textbox_pax">
+			<p>
+				The Robotics Club, NIE is one of its kind interdisciplinary technical clubs of The National Institute of
+				Engineering, Mysuru. Along with our diversity, we share a common passion for robotics. We take up
+				socio-academic projects and try to solve the daily life problems in the society providing innovative
+				solutions through our continuous dedicated work in the field of robotics and automation. We believe that
+				robotics and automation lower the risk of human error and adds intelligence to the system.
+				Being a student club, under The Mechanical Engineering Department, NIE. We welcome everyone, with or
+				without prior knowledge of Robotics, to be a part of our ROBO family. The club offers indispensable
+				professional guidance and workshops along with tools, components, and workspace. Our target is to
+				transform members of our club into creative and technically strong engineers capable of solving various
+				global challenges. The Robotics Club, NIE is making a difference by allowing students to learn about
+				engineering and robotics with hands-on experience.
+			</p>
+		</div>
+	</div>
+
+	<div class="grppic">
+		<div class="bottomTriangle"></div>
+		<div class="transparent"></div>
+		<div class="topTriangle"></div>
+	</div>
+
+	<div class="About">
+		<div class="title">
+			<h1>What we do</h1>
+		</div>
+
+		<div class="separator"></div>
+
+		<div class="textbox_pax">
+			<p>
+				We participate in various recognized competitions and tech-fests hosted by top technical institutes all
+				across the country. Unlike many other student teams, we're not focused on any one particular contest: we
+				continually evolve by finding exciting new opportunities for challenge. We are grateful to all our
+				members who have made us proud in all these events.
+				Here, we explore exciting new technologies, learn critical skills, and believe that power is gained by
+				sharing knowledge and not by hoarding it. We encourage this by conducting numerous workshops on various
+				topics that are of current and future relevance in the field of robotics and automation.
+			</p>
+		</div>
+	</div>
+
+	<div class="workshop_event_pic">
+		<div class="bottomTriangle"></div>
+		<div class="transparent"></div>
+		<div class="topflipTriangle" id="2"></div>
+	</div>
+
+	<!-- Gallery Section -->
+	<div class="gallery" id="Gallery">
+		<h1>Gallery</h1>
+		<div class="gallery-separator"></div>
+		<div class="grid-container row">
+
+			<div class="grid-item col-md-6 col-sm-12">
+				<a href="rikishi.html">
+					<div class="up1">
+						<img src="images/gallery/roborikishi.JPG" alt="" loading="lazy">
+						<div class="desc1">
+							<p>Roborikishi is the annual technical fest conducted by the club every year at NIE</p>
+						</div>
+					</div>
+				</a>
+				<div class="down1">
+					<h2>Roborikishi</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12">
+				<a href="workshops.html">
+					<div class="up2">
+						<img src="images/bgimg.png" alt="" loading="lazy">
+						<div class="desc2">
+							<p>Various technical workshops like arduino, bluetooth and many advanced workshops are
+								conducted throughout the year by the club</p>
+						</div>
+					</div>
+				</a>
+				<div class="down2">
+					<h2>Workshops & Events</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12">
+				<a href="rep.html">
+					<div class="up3">
+						<img src="images/bgimg.png" alt="" loading="lazy">
+						<div class="desc3">
+							<p>Robotics club, NIE represents our college in various activities like participating in
+								inter-college compititions</p>
+						</div>
+					</div>
+				</a>
+				<div class="down3">
+					<h2>Competitions</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12">
+				<a href="projects.html">
+					<div class="up4">
+						<img src="images/gallery/project.JPG" alt="" loading="lazy">
+						<div class="desc4">
+							<p>Members take up and develop various projects which are also displayed in roborikishi</p>
+						</div>
+					</div>
+				</a>
+				<div class="down4">
+					<h2>Projects</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12">
+				<a href="core.html">
+					<div class="up5">
+						<img src="images/gallery/core.jpeg" alt="" loading="lazy">
+						<div class="desc5">
+							<p>Robotics club is a student body run by UG students of NIE</p>
+						</div>
+					</div>
+				</a>
+				<div class="down5">
+					<h2>Core Team</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12">
+				<a href="alumni.html">
+					<div class="up6">
+						<img src="images/gallery/alumni.JPG" alt="" loading="lazy">
+						<div class="desc6">
+							<p>Check out the alumni who have been part of the club and made numerous contributions</p>
+						</div>
+					</div>
+				</a>
+				<div class="down6">
+					<h2>Alumni</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="before-contactUs">
+		<div class="bottomflipTriangle2"></div>
+		<div class="transparent2"></div>
+		<div class="topflipTriangle2" id="3"></div>
+	</div>
+
+	<!-- Contact Us -->
+	<div id="contact" class="row">
+		<div id="left" class="col-md-6 col-sm-12">
+			<div id="add">
+				<h1 class="heading">Address:</h1>
+				<p>Robotics Club@NIE<br>The National Institute of Engineering<br>Mananthavadi Road<br>Mysore-570008</p>
+			</div>
+			<div id="lec">
+				<h1>Faculty advisors:</h1>
+				<div id="ims">
+					<div id="prakash">
+						<img src="images/prak.jpg" loading="lazy">
+						<p>Dr. Prakash K R<br>Professor</p>
+					</div>
+					<div id="srikanth">
+						<img src="images/srik.jpg" loading="lazy">
+						<p>Mr. Srikanth N S<br>Assistant professor</p>
+					</div>
+				</div>
+			</div>
+			<div id="team">
+				<h1>Contact core:</h1>
+				<p>Nithin M R<br>+91 8073203248</p>
+				<!-- <p>Radhika Sabnavis<br>+91 7625063039</p> -->
+				<!-- <p>Pavan Bhaskar<br>+91 8553193845</p> -->
+			</div>
+		</div>
+		<div id="right" class="col-md-6 col-sm-12">
+			<div class="powr-form-builder" id="79e12d79_1582792974"></div>
+			<script src="https://www.powr.io/powr.js?platform=embed"></script>
+		</div>
+	</div>
+
+	<div class="transparent3">
+		<ul>
+			<li>
+				<a href="mailto: support@roboticsclubnie.in">
+					<div class="social">Email: support@roboticsclubnie.in</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://instagram.com/roboticsclub_nie">
+					<div class="social">Instagram: roboticsclub_nie</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/roboticsclub-nie">
+					<div class="social">Github: roboticsclub-nie</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+	<!-- Custom Scripts -->
+	<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
