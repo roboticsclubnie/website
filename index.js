@@ -1,4 +1,6 @@
 
+//_______________________________________________________________________________________________________________________
+
 // B-falling-in-the-logo animation
 function logo(){
     y = (y === logos.length - 1) ? 0 : y + 1;
@@ -17,6 +19,7 @@ logos[2] = "images/logo3.png";
 logos[3] = "images/logo4.png";
 logos[4] = "images/logo5.png";
 
+//_______________________________________________________________________________________________________________________
 
 // Gallery Hover Effect:
 for (let i = 1; i <= 6; i++) {
@@ -34,6 +37,7 @@ for (let i = 1; i <= 6; i++) {
     });
 }
 
+//_______________________________________________________________________________________________________________________
 
 // Navbar Scroll effect
 function navOnScroll() {
@@ -47,7 +51,7 @@ function navOnScroll() {
     navbar.style.height = '8vh';
     navlogo.style.width = '13.33vmin';
     navitems.style.height = '6.66vmin';
-    navitems.style.margin = '0 0 0 36.5vw';
+    navitems.style.margin = '0 0 0 32vw';
     ul.style.margin = '2vmin';
   }
   else {
@@ -55,11 +59,13 @@ function navOnScroll() {
     navbar.style.height = '12vmin';
     navlogo.style.width = '20vmin';
     navitems.style.height = '10vmin';
-    navitems.style.margin = '0 0 0 33vw';
+    navitems.style.margin = '0 0 0 28vw';
     ul.style.margin = '4vmin';
   }
 }
 window.addEventListener('scroll', navOnScroll);
+
+//_______________________________________________________________________________________________________________________
 
 // Preloader
 function hidePreloader() {
@@ -68,8 +74,9 @@ function hidePreloader() {
   preloader.style.display = 'none';
   preloaderLogo.style.display = 'none';
 }
-setTimeout(hidePreloader, 2500);
+setTimeout(hidePreloader, 1750);
 
+//_______________________________________________________________________________________________________________________
 
 // Hamburger Menu
 $('.navbar-toggler').click(function() {
@@ -86,11 +93,13 @@ $('.navbar-toggler').click(function() {
   }); 
 });
 
+//_______________________________________________________________________________________________________________________
+
 // Phone desktop segregation of classes
 if ($(window).width() < 500) {
-  $('.navitems ul li a').removeClass('animate__animated').removeClass('animate__fadeInUp').removeClass('animate__delay-3s').removeClass('animate__delay-4s').removeClass('animate__delay-5s');
-  $('#club').removeClass('animate__delay-4s').addClass('animate__delay-2s');
-  $('.flex-wrapper2').removeClass('animate__delay-5s').addClass('animate__delay-3s');
+  $('.navitems ul li a').removeClass('animate__animated').removeClass('animate__fadeInUp').removeClass('animate__delay-2s').removeClass('animate__delay-2s').removeClass('animate__delay-2s');
+  $('#club').removeClass('animate__delay-2s').addClass('animate__delay-2s');
+  $('.flex-wrapper2').removeClass('animate__delay-2s').addClass('animate__delay-3s');
   for(let i = 1; i <= 6; i++) {
     $(`.up${i} img`).addClass("up-img");
   }
@@ -101,6 +110,8 @@ else {
     $(`.up${i} img`).removeClass("up-img");
   }
 }
+
+//_______________________________________________________________________________________________________________________
 
 // Class segregation in case the viewport is resized
 window.addEventListener('resize', function () {
@@ -119,3 +130,5 @@ window.addEventListener('resize', function () {
     }
   }
 });
+
+//_______________________________________________________________________________________________________________________

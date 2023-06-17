@@ -33,7 +33,7 @@ body {
 	/* transform: translate(-50%, -50%); */
 	width: 25vw;
 	height: auto;
-	animation: slideUp 1.5s linear 1s 1 normal forwards;
+	animation: slideUp 0.75s linear 1s 1 normal forwards;
 }
 
 @keyframes slideUp {
@@ -80,7 +80,7 @@ body {
 .navitems {
 	opacity: 1.0 ;
 	height: 10vmin;
-	margin: 0 0 0 33vw;
+	margin: 0 0 0 28vw;
 
 	/* FONT */
 	font-family: 'Space Grotesk', sans-serif;
@@ -295,7 +295,6 @@ body {
 }
 
 /*************************************************************************************************************/
-
 /********************************************* About Section ************************************************/
 .transparent {
 	display: flex;
@@ -521,7 +520,7 @@ body {
 }
 
 .gallery {
-	background-color: #0D2C4E;
+	background-color: rgb(13, 44, 78);
 	top: 0vmin;
 }
 
@@ -869,8 +868,5 @@ body {
 .up-img {
 	transform: translate(-25%, 0%);
 }
-
-/***************************************************************************************************/
-/************************************* Functionality Classes ***************************************/
 
 /***************************************************************************************************/

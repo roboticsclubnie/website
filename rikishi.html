@@ -1,142 +1,905 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="rikishi.css">
+    <title>Roborikishi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes" />
+    <meta name="keywords" content="Robotics, club, NIE" />
+    
+    <!-- SONO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- OSWALD FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+
     <!-- SPACE GROTESK FONT-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-		rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="rikishi.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
   </head>
-  <body onload="startTimer()">
-    <div id="intro">
-      <section id="navbar">
-        <a href="#"> <img id="navlogo" src="images/Logo.png"></a>
-        <div id="navitems">
-          <ul id="unlist">
-            <li><a href="#">Home</a></li>
-            <li><a href="rr22.html">Roborikishi'22</a></li>
-            <li><a href="#2">Gallery</a></li>
-            <li><a href="#3">Contact us</a></li>
-          </ul>
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="custom-navbar">
+      <a id="navlogo" href="index.html"><img class="animate__animated animate__fadeInUp animate__delay-1s" src="images/Logo.png" loading="lazy"></a> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="images/ham_menu.png" alt="..." loading="lazy"></span>
+      </button>
+      <div class="navitems collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" id="unlist">
+          <li>
+            <a class="animate__animated animate__fadeInUp animate__delay-2s" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="animate__animated animate__fadeInUp animate__delay-2s" href="#2">Gallery</a>
+          </li>
+          <li>
+            <a class="animate__animated animate__fadeInUp animate__delay-2s" href="#3">Contact us</a>
+          </li>
+          <li>
+            <a class="animate__animated animate__fadeInUp animate__delay-2s cta" href="rikishiRegister.html">Register here</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- The video --> 
+    <!-- <video autoplay muted loop id="myVideo">
+      <source src="roboriki/robo2.mp4">
+    </video> -->
+
+    <div class="push-down-contents animate__animated animate__fadeInUp animate__delay-2s">
+      <div class="topTriangle-withoutTransparencychange"></div>
+      <h1 class="heading">About Roborikishi</h1>
+      <div class="about">
+        <div class="separator"></div>
+        <p>Roborikishi is an annually held national-level event conducted by The Department of Mechanical Engineering and Robotics Club, NIE. In this, students from different colleges participate and compete with each other in different events. This event mainly focuses on creating awareness about robotics and automation in students of all age groups irrespective of their discipline. As a part of the event, Robo-Expo would be organized where various Robotics-related projects build by us are exhibited. We have exciting competitions like the fastest line follower, maze solver, Robo war, Robo race. Students from all over the country build their bots to compete with each other. The goal is to test the creativity, programming, and designing skills of the contestants.</p>
+      </div>
+      <div class="bottomTriangle"></div>
+    </div>
+
+
+    <div class="waviy">
+      <span style="--i:1">T</span>
+      <span style="--i:2">h</span>
+      <span style="--i:3">e</span>
+      <span style="--i:5"> </span>
+      <span style="--i:5"> </span>
+      <span style="--i:5"> </span>
+      <span style="--i:8">R</span>
+      <span style="--i:9">o</span>
+      <span style="--i:10">b</span>
+      <span style="--i:11">o</span>
+      <span style="--i:12">-</span>
+      <span style="--i:13">e</span>
+      <span style="--i:14">x</span>
+      <span style="--i:15">p</span>
+      <span style="--i:16">o</span>
+    </div>
+
+    <div class="topTriangle"></div>
+
+    <div id="parallax">
+      <section>
+        <div class="block">
+          <p class="line-break"></p>
+          <p style="font-family: 'Space Grotesk', sans-serif;" class="margin-top-30">
+            The members of the Robotics club, NIE exhibit various projects which are based on Arduino and Raspberry Pi. 
+            The expo aims to demonstrate practical applications of robotics and automation in day to day life.
+          </p>
+          <p class="line-break margin-top-10"></p>
+        </div> 
+      </section>
+
+      <section>
+          <div class="parallax-line-follower">
+            <h2><em>Line follower</em></h2>
+          </div>
+      </section>
+      
+      <section>
+        <div class="block">
+          <p>
+            <span class="first-character">T</span>he challenge is to drive through the track while following a black line against a white background and tackling the surprise challenges on the arena. 
+            The quickest and the most intelligent robot will be declared as the winner.
+          </p>
+          <p class="line-break margin-top-30"></p>
+        </div>
+      
+      <section>
+        <div class="parallax-robo-race">
+          <h2><em>Death Race</em></h2>
         </div>
       </section>
-<h1>-</h1>
-
- <!-- The video -->
- <video autoplay muted loop id="myVideo">
-  
-  <source src="roboriki/robo2.mp4">
-</video>
-
-<p class="line-break margin-top-10"></p>
-<p class="line-break margin-top-10"></p>
-<p class="line-break margin-top-10"></p>
-<p class="line-break margin-top-10"></p>
-<div class="heading"><h1><u>ABOUT THE EVENT</u></h1></div>
-
-<div class="about">
-<p class="line-break margin-top-10"></p>
-<p>Roborikishi is an annually held national-level event conducted by The Department of Mechanical Engineering and Robotics Club @ NIE. In this, students from different colleges participate and compete with each other in different events. This event mainly focuses on creating awareness about robotics and automation in students of all age groups irrespective of their discipline. As a part of the event, Robo-Expo would be organized where various Robotics-related projects build by us are exhibited. We have exciting competitions like the fastest line follower, maze solver, Robo war, Robo race. Students from all over the country build their bots to compete with each other. The goal is to test the creativity, programming, and designing skills of the contestants.</p>
-</div>
-
-<div class="waviy">
-  <span style="--i:1">E</span>
-  <span style="--i:2">V</span>
-  <span style="--i:3">E</span>
-  <span style="--i:4">N</span>
-  <span style="--i:5">T</span>
-  <span style="--i:6">S</span>
-  <!-- <span style="--i:7">K</span>
-  <span style="--i:8">I</span>
-  <span style="--i:9">S</span>
-  <span style="--i:10">H</span>
-  <span style="--i:11">I</span> -->
-
- </div>
-  
-  <p class="line-break margin-top-10"></p>
-  <p class="line-break margin-top-10"></p>
-  <p class="line-break margin-top-10"></p>
-  <p class="line-break margin-top-10"></p>
-  
-
-  
-  <div id="parallax-world-of-ugg">
-    
-    <section>
-        <div class="parallax-one">
-          <h2>LINE FOLLOWER</h2>
-        </div>
-    </section>
-    
-    <section>
-      <div class="block">
-        <p><span class="first-character sc">L</span>ine following is a type of robotics technology that enables a robot to navigate autonomously by following a line or track. It enhances interdisciplinary approach to mechanical, electronic, electrical, and programming skills.
-          In a typical line following system, the robot is equipped with one or more sensors that detect the line or track on which it is moving. The most common type of sensor used is an infrared sensor, which detects the contrast between the line and the surrounding surface. Other types of sensors that may be used include photoelectric sensors, reflective sensors, or laser sensors.
-          As the robot moves along the line, the sensor(s) detect the position of the line relative to the robot's current position. The robot's control system then uses this information to adjust the robot's speed and direction so that it stays on the line. The control system may use a variety of algorithms to determine the best course of action, such as PID (proportional-integral-derivative) control, fuzzy logic, or neural networks.
-          Line following robots can be programmed to follow a wide variety of line configurations, including straight lines, curved lines, and lines with intersections, or branching paths. In addition, some line following systems can be designed to detect and avoid obstacles or to perform other tasks such as picking up and delivering items along the line.
-          Line following technology is commonly used in applications such as factory automation, warehouse management, and transportation systems. One of the major advantages of line following technology is its ability to enable robots to operate autonomously in environments where human intervention would be difficult or dangerous.
-          </p>
-        <p class="line-break margin-top-10"></p>
-        <p class="margin-top-10">Comprehensively, line following technology is a powerful tool for enabling robots to navigate autonomously in a wide variety of applications. With continued advances in robotics and sensor technology, it is likely that line following systems will become even more sophisticated and versatile along with greater advantage in the years to come.</p>
-      </div>
-    </section>
-    
-    <section>
-      <div class="parallax-two">
-        <h2>ROBO RACE</h2>
-      </div>
-    </section>
-    
-    <section>
-      <div class="block">
-        <p><span class="first-character ny">B</span>reaking into the New York fashion world is no easy task. But by the early 2000's, UGG Australia began to take it by storm. The evolution of UGG from a brand that made sheepskin boots, slippers, clogs and sandals for an active, outdoor lifestyle to a brand that was now being touted as a symbol of a stylish, casual and luxurious lifestyle was swift. Much of this was due to a brand repositioning effort that transformed UGG into a high-end luxury footwear maker. As a fashion brand, UGG advertisements now graced the pages of Vogue Magazine as well as other fashion books. In the mid 2000's, the desire for premium casual fashion was popping up all over the world and UGG was now perfectly aligned with this movement.</p>
-        <p class="line-break margin-top-10"></p>
-        <p class="margin-top-10">Fueled by celebrities from coast to coast wearing UGG boots and slippers on their downtime, an entirely new era of fashion was carved out. As a result, the desire and love for UGG increased as people wanted to go deeper into this relaxed UGG experience. UGG began offering numerous color and style variations on their sheepskin boots and slippers. Cold weather boots for women and men and leather casuals were added with great success. What started as a niche item, UGG sheepskin boots were now a must-have staple in everyone's wardrobe. More UGG collections followed, showcasing everything from knit boots to sneakers to wedges, all the while maintaining that luxurious feel UGG is known for all over the world. UGG products were now seen on runways and in fashion shoots from coast to coast. Before long, the love spread even further.</p>
-      </div>
-    </section>
-    
-    <section>
-      <div class="parallax-three">
-        <h2>ROBO WAR</h2>
-      </div>
-    </section>
-    
-    <section>
-      <div class="block">
-        <p><span class="first-character atw">R</span>obowars is a form of competitive robotics where two or more robots fight against each other in an arena with the aim of destroying their opponents. This is a fascinating and challenging area of robotics that requires a combination of mechanical design, electrical engineering, and programming skills.
-
-          The concept of robowars has been around for several decades, but the recent advancements in technology have allowed for more sophisticated and complex robots to be created, making the battles even more intense and exciting. The robots used in robowars are typically remote-controlled, with various weapons and defensive mechanisms added to increase their chances of victory.
-          
-          Participating in robowars is an  excellent opportunity for us to apply our skills and knowledge to a real-world application. Building a competitive robot involves a lot of planning, design, and testing, which can help club members develop critical thinking, problem-solving, and teamwork skills. Furthermore, participating in competitions can be a fantastic way to showcase the club's talent and skills while having fun and learning from other robotics enthusiasts.
-          
-          </p>
-        <p class="line-break margin-top-10"></p>
-        <p class="margin-top-10">In summary, robowars is an exciting and challenging area of robotics that requires a combination of mechanical design, electrical engineering, and programming skills. Participating in robowars is an fantastic opportunity for members of the Robotics Club@nie to apply their skills and knowledge while having fun and learning from other robotics enthusiasts.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="parallax-three">
-        <h2>ROBO SOCCER</h2>
-      </div>
-    </section>
-    
-    <section>
-      <div class="block">
-        <p><span class="first-character atw">W</span>hen the New York fashion community notices your brand, the world soon follows. The widespread love for UGG extended to Europe in the mid-2000's along with the stylish casual movement and demand for premium casual fashion. UGG boots and shoes were now seen walking the streets of London, Paris and Amsterdam with regularity. To meet the rising demand from new fans, UGG opened flagship stores in the UK and an additional location in Moscow. As the love spread farther East, concept stores were opened in Beijing, Shanghai and Tokyo. UGG Australia is now an international brand that is loved by all. This love is a result of a magical combination of the amazing functional benefits of sheepskin and the heightened emotional feeling you get when you slip them on your feet. In short, you just feel better all over when you wear UGG boots, slippers, and shoes.</p>
-        <p class="line-break margin-top-10"></p>
-        <p class="margin-top-10">In 2011, UGG will go back to its roots and focus on bringing the active men that brought the brand to life back with new styles allowing them to love the brand again as well. Partnering with Super Bowl champion and NFL MVP Tom Brady, UGG will invite even more men to feel the love the rest of the world knows so well. UGG will also step into the world of high fashion with UGG Collection. The UGG Collection fuses the timeless craft of Italian shoemaking with the reliable magic of sheepskin, bringing the luxurious feel of UGG to high end fashion. As the love for UGG continues to spread across the world, we have continued to offer new and unexpected ways to experience the brand. The UGG journey continues on and the love for UGG continues to spread.</p>
-      </div>
-    </section>
       
+      <section>
+        <div class="block">
+          <p>
+            <span class="first-character">T</span>he target is to design a wired or wireless manually controlled robot that should be able to travel on land, water(multiple terrains). 
+            The robot that traverses all the hurdles and completes the track in a minimum amount of time will be declared as the "DEATH RACE CHAMPION".</p>
+          <p class="line-break margin-top-30"></p>
+        </div>
+      </section>
+      
+      <section>
+        <div class="parallax-robo-war">
+          <h2><em>Robo War</em></h2>
+        </div>
+      </section>
+      
+      <section>
+        <div class="block">
+          <p>
+            <strong>Track and Arena:</strong><br>
+            The robots are tested for elimination in the preliminary rounds, so only the best robots survive on the arena. To do this various tracks and hurdles have been set up for the robots to pass.
+          </p>
+          <p>
+            <strong>Flex your Muscles:</strong><br>
+            The first is the weight push test, where the bots have to push weights to move on in the event.
+          </p>
+          <p> 
+            <strong>Track:</strong><br>
+            Then there is a track event, where the robots have to pass through hurdles on its way. There will be hurdles like sand, stones, inclined, declined surfaces, and other surprise elements. The points in this round are allotted based on the time taken to clear the event. The track will have curves too, to check the swiftness of the robot. There will be stages in the track where the robots can skip a hurdle, but a penalty will be considered for skipping a hurdle.
+          </p>
+          <p>
+            <strong>Bonus rounds:</strong><br> 
+            The robots then get an opportunity to demonstrate their weapons, these also add to the points allotted to the robot.
+          </p>
+          <p>
+            <strong>Arena:</strong><br>
+            Arena consists of a square surface made up of wood. The arena is covered by barricades to prevent parts of the robot flying out of the arena. The time allotted for a battle is 3 minutes. The robot has to either immobilize the opponent or throw it out of the arena. The robot to win the battle is allowed to continue in the event, the opponent is knocked out. The robot to reach the final battle and win it will grab the title of the championship.
+          </p>
+          <p class="line-break margin-top-30"></p>
+        </div>
+      </section>
+
+      <section>
+        <div class="parallax-robo-soccer">
+          <h2><em>Robo Soccer</em></h2>
+        </div>
+      </section>
+      
+      <section>
+        <div class="block">
+          <p>
+            <span class="first-character">R</span>obo-soccer competitions bring together teams of intelligent robots controlled by human operators. 
+            These highly skilled robots navigate the field, showcasing their agility, precision, and strategic thinking. 
+            The objective is to score goals by maneuvering the soccer ball past opponents and into the opposing team's net. With advanced sensors, actuators, and algorithms, these robots swiftly respond to the ever-changing game dynamics. 
+            Robo-soccer competitions are a thrilling fusion of human ingenuity and robotic capabilities, where teamwork, adaptability, and precise control determine the victorious team.
+          </p>
+          <p class="line-break margin-top-30"></p>
+        </div>
+      </section>
+      <div class="bottomTriangle-transparent90"></div>        
     </div>
-  <div>
-  <script type="text/javascript" src="index.js"></script>
-  </div>
+
+    <div class="topTriangle" id="2"></div>
+    <section class="gallery">
+
+      <h1>Expo Gallery</h1>
+      <div class="gallery-separator"></div>
+
+      <div class="row custom-row">
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/expo/_DSC0410.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">An Expo Exhibit</p>
+                <div class="title">A Robot that speaks</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/expo/_DSC0410.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>The Bot that speaks to you</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/expo/IMG_6107.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">A Club Project</p>
+                <div class="title">Gesture controlled bot</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/expo/IMG_6107.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Gesture Controlled Bot</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/expo/IMG_6110.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">A Club Project</p>
+                <div class="title">Spider bot</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/expo/IMG_6110.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Spider Bot</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/line/_DSC0498.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">An Expo Event</p>
+                <div class="title">Line follower race</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/line/_DSC0498.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Line Follower Arena</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/line/L1.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">A Club Bot</p>
+                <div class="title">Line followers</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/line/L1.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Line Followers</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/race/IMG_6328.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">An Expo Event</p>
+                <div class="title">Death Race</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/race/IMG_6328.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Deth Race - Bumpy terrain</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/race/IMG_6356.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">An Expo Event</p>
+                <div class="title">Death Race</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/race/IMG_6356.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Death Race - Rocky terrain</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/race/IMG_9828.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">A Club Bot</p>
+                <div class="title">Race Bot</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/race/IMG_9828.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Our Race Bot!</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/war/IMG_6376.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">An Expo Event</p>
+                <div class="title">Botwars</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/war/IMG_6376.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Lets get fighting!</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/war/IMG_6377.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">An Expo Event</p>
+                <div class="title">Botwars</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/war/IMG_6377.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>Smoke comes after fire 🔥</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/war/IMG_6401.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">An Expo Event</p>
+                <div class="title">Botwars</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/war/IMG_6401.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>All set to CHARGE!</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+          <div class="container noselect">
+            <div class="canvas">
+              <div class="tracker tr-1"></div>
+              <div class="tracker tr-2"></div>
+              <div class="tracker tr-3"></div>
+              <div class="tracker tr-4"></div>
+              <div class="tracker tr-5"></div>
+              <div class="tracker tr-6"></div>
+              <div class="tracker tr-7"></div>
+              <div class="tracker tr-8"></div>
+              <div class="tracker tr-9"></div>
+              <div class="tracker tr-10"></div>
+              <div class="tracker tr-11"></div>
+              <div class="tracker tr-12"></div>
+              <div class="tracker tr-13"></div>
+              <div class="tracker tr-14"></div>
+              <div class="tracker tr-15"></div>
+              <div class="tracker tr-16"></div>
+              <div class="tracker tr-17"></div>
+              <div class="tracker tr-18"></div>
+              <div class="tracker tr-19"></div>
+              <div class="tracker tr-20"></div>
+              <div class="tracker tr-21"></div>
+              <div class="tracker tr-22"></div>
+              <div class="tracker tr-23"></div>
+              <div class="tracker tr-24"></div>
+              <div class="tracker tr-25"></div>
+              <div id="card">
+                <div class="image-container">
+                  <img src="assets/war/IMG_9859.JPG" alt="" loading="lazy">
+                </div>
+                <p id="prompt">A Club Bot</p>
+                <div class="title">Warbot</div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-modal">
+            <span class="close">&times;</span>
+            <div class="row custom-modal-content">
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <img src="assets/war/IMG_9859.JPG" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-12 col-md-6 custom-col-extension">
+                  <h2>We wage wars!</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Beatae neque officia maiores minus soluta minima placeat tenetur laboriosam est, 
+                    veritatis nisi odio quasi accusantium! Cumque adipisci at excepturi pariatur esse, 
+                    labore enim recusandae aspernatur est dolor asperiores. Officia nihil dolore ducimus beatae, nemo, optio consequuntur, vitae maiores culpa a id.
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <div class="bottomTriangle-transparent90" id="3"></div>   
+
+    <div class="transparent3">
+      <ul>
+        <li>
+          <a href="mailto: support@roboticsclubnie.in">
+            <div class="social">Email: support@roboticsclubnie.in</div>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/roboticsclub_nie">
+            <div class="social">Instagram: roboticsclub_nie</div>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/roboticsclub-nie">
+            <div class="social">Github: roboticsclub-nie</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="rikishi.js"></script>
+
   </body>
-  </html>
   </html>
