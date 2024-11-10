@@ -68,7 +68,7 @@ body {
 }
 
 #navlogo {
-	margin-left: 14vw;
+	margin-left: 6vw;
 	opacity: 1.0;
 }
 
@@ -717,6 +717,12 @@ body {
 	padding: 4vw 5vw 5vw 10vw;
 }
 
+#contact-heading{
+	font-family: 'Space Grotesk', sans-serif;
+	color:white;
+	padding-bottom: 2;
+}
+
 #add {
 	padding-top: 3vmin;
 	padding-left: 5vmin;
@@ -784,6 +790,7 @@ body {
 }
 
 #team {
+	
 	padding-left: 2vw;
 	padding-right: 5vmin;
 	padding-bottom: 3vmin;
@@ -792,22 +799,29 @@ body {
 	border: 0.5vmin solid rgba(190, 190, 190, 1);
 	margin-bottom: 5vmin;
 }
+#ims
+{
+	display: flex;
+}
 
 #team h1 {
 	padding-top: 1vw;
 	font-family: 'Space Grotesk', sans-serif;
 	font-size: 3vmin;
-	color: rgba(0, 33, 69, 1);
+	color: black;
 	line-height: 3vmin;
+	
 }
+
 
 #team p {
 	position: relative;
 	left: 1vw;
-	font-family: 'Space Grotesk', sans-serif;
-	font-size: 2.4vmin;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2.5vmin;
 	color: rgba(0, 33, 69, 1);
 	line-height: 3vmin;
+	padding: 0;
 }
 
 #right {
@@ -829,7 +843,6 @@ body {
 	padding: 1vw 8vw;
 	margin: 0vmin;
 	width: 100vw;
-
 	list-style: none;
 	opacity: 1;
 }
@@ -837,10 +850,7 @@ body {
 .transparent3 li {
 	padding: 0 7vw 0 7vw;
 	float: inline-start;
-	
-
 	text-align: center;
-
 	font-family: 'Oswald', sans-serif;
 	font-size: 20px;
 	color: rgba(0, 33, 69, 1);
