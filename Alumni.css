@@ -341,12 +341,11 @@ h1{
 	text-decoration: none;
 	color: white;
 }
-@media (min-width: 768px) {
-  .container {
-      flex-wrap: wrap;
-  }
-}
+
 @media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+}
   #form a {
     width: 100%;
   }
