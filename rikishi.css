@@ -314,6 +314,9 @@ h1{
 	background-color: rgba(13, 44, 78, 1);
 	padding: 10vh 15vw 10vh;
 	opacity: 100%;
+	font-family: 'Space Grotesk', sans-serif;
+	text-align:justify;
+
 }
 
 #parallax .parallax-line-follower {

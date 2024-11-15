@@ -329,6 +329,10 @@ h1{
         background-color:#0D2C4E;
         border-radius: 2vmin;
     }
+
+    .container h1{
+      font-size: 2rem;
+    }
     
 
 
