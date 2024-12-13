@@ -767,6 +767,35 @@ user-select: none;
 	text-decoration: none;
 	color: white;
 }
+/* Custom button styles */
+.button-container {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Make the container take the full viewport height */
+}
+
+.btn-primary {
+  width: 400px; /* Increased button width */
+  height: 75px;
+  padding: 1rem 2rem; /* Increased padding */
+  font-size: 1.25rem; /* Larger font size */
+  font-weight: 600;
+  border: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgb(65, 182, 200), rgb(25, 49, 159));
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgb(35, 140, 154),  rgb(25, 49, 159));
+  color: #ffffff;
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  box-shadow: 0 4px 15px rgba(0, 200, 255, 0.5); /* Add a glowing effect */
+}
 
 /***************************************************************************************************/
 /******************************************** JS CLASSES *******************************************/
