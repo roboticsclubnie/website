@@ -3,7 +3,17 @@
 
 <head>
 	<title>Robotics Club, NIE</title>
+	<script>
+		if (location.protocol !== 'https:') {
+			location.replace(`https://${location.host}${location.pathname}${location.search}`);
+		}
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes" />
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval';">
+
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 	<meta name="keywords" content="Robotics, club, NIE" />
 
 	<!-- SONO FONT -->
