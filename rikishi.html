@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Roborikishi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=yes" />
+  <meta name="keywords" content="Robotics, club, NIE" />
+
+  <!-- SONO FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- OSWALD FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+
+  <!-- SPACE GROTESK FONT-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="rikishi.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" id="custom-navbar">
+    <a id="navlogo" href="index.html"><img class="animate__animated animate__fadeInUp animate__delay-1s"
+        src="images/Logo.png" loading="lazy"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span><img src="images/ham_menu.png" alt="..." loading="lazy"></span>
+    </button>
+    <div class="navitems collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" id="unlist">
+        <li>
+          <a class="animate__animated animate__fadeInUp animate__delay-2s" href="index.html">Home</a>
+        </li>
+        <li>
+          <a class="animate__animated animate__fadeInUp animate__delay-2s" href="#2">Gallery</a>
+        </li>
+        <li>
+          <a class="animate__animated animate__fadeInUp animate__delay-2s" href="#3">Contact us</a>
+        </li>
+        <li>
+          <a class="animate__animated animate__fadeInUp animate__delay-2s" href="assets/Rikishi Rulebook 26.pdf"
+            target="_blank">Rule Book</a>
+        </li>
+        <li>
+          <a class="animate__animated animate__fadeInUp animate__delay-2s cta" href="registration.html">Register
+            here</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- The video -->
+  <!-- <video autoplay muted loop id="myVideo">
+      <source src="roboriki/robo2.mp4">
+    </video> -->
+
+  <div class="push-down-contents animate__animated animate__fadeInUp animate__delay-2s">
+    <div class="topTriangle-withoutTransparencychange"></div>
+    <h1 class="heading">About Roborikishi</h1>
+    <div class="about">
+      <div class="separator"></div>
+      <p>Roborikishi is an annually held national-level event conducted by The Department of Mechanical Engineering and
+        Robotics Club, NIE. In this, students from different colleges participate and compete with each other in
+        different events. This event mainly focuses on creating awareness about robotics and automation in students of
+        all age groups irrespective of their discipline. As a part of the event, Robo-Expo would be organized where
+        various Robotics-related projects build by us are exhibited. We have exciting competitions like the fastest line
+        follower, maze solver, Robo war, Robo race. Students from all over the country build their bots to compete with
+        each other. The goal is to test the creativity, programming, and designing skills of the contestants.</p>
+    </div>
+    <div class="bottomTriangle"></div>
+  </div>
+
+
+  <div class="waviy">
+    <span style="--i:1">T</span>
+    <span style="--i:2">h</span>
+    <span style="--i:3">e</span>
+    <span style="--i:5"> </span>
+    <span style="--i:5"> </span>
+    <span style="--i:5"> </span>
+    <span style="--i:8">R</span>
+    <span style="--i:9">o</span>
+    <span style="--i:10">b</span>
+    <span style="--i:11">o</span>
+    <span style="--i:12">-</span>
+    <span style="--i:13">e</span>
+    <span style="--i:14">x</span>
+    <span style="--i:15">p</span>
+    <span style="--i:16">o</span>
+  </div>
+
+  <div class="topTriangle"></div>
+
+  <div id="parallax">
+    <section>
+      <div class="block">
+        <p class="line-break"></p>
+        <p style="font-family: 'Space Grotesk', sans-serif;" class="margin-top-30">
+          The members of the Robotics club, NIE exhibit various projects which are based on Arduino and Raspberry Pi.
+          The expo aims to demonstrate practical applications of robotics and automation in day to day life.
+        </p>
+        <p class="line-break margin-top-10"></p>
+      </div>
+      <div class="button-container">
+        <a href="registration.html" class="btn btn-primary m-2" target="_self"> Register here </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="parallax-line-follower">
+        <h2><em>Line follower</em></h2>
+      </div>
+    </section>
+
+    <section>
+      <div class="block">
+        <p>
+          <span class="first-character">T</span>he challenge is to drive through the track while following a black line
+          against a white background and tackling the surprise challenges on the arena.
+          The quickest and the most intelligent robot will be declared as the winner.
+        </p>
+        <p class="line-break margin-top-30"></p>
+      </div>
+
+      <section>
+        <div class="parallax-robo-race">
+          <h2><em>Death Race</em></h2>
+        </div>
+      </section>
+
+      <section>
+        <div class="block">
+          <p>
+            <span class="first-character">T</span>he target is to design a wired or wireless manually controlled robot
+            that should be able to travel on land, water(multiple terrains).
+            The robot that traverses all the hurdles and completes the track in a minimum amount of time will be
+            declared as the "DEATH RACE CHAMPION".
+          </p>
+          <p class="line-break margin-top-30"></p>
+        </div>
+      </section>
+
+      <!--       <section>
+        <div class="parallax-robo-war">
+          <h2><em>Robo War</em></h2>
+        </div>
+      </section> -->
+
+      <!--       <section>
+        <div class="block">
+          <p>
+            <strong>Track and Arena:</strong><br>
+            The robots are tested for elimination in the preliminary rounds, so only the best robots survive on the arena. To do this various tracks and hurdles have been set up for the robots to pass.
+          </p>
+          <p>
+            <strong>Flex your Muscles:</strong><br>
+            The first is the weight push test, where the bots have to push weights to move on in the event.
+          </p>
+          <p> 
+            <strong>Track:</strong><br>
+            Then there is a track event, where the robots have to pass through hurdles on its way. There will be hurdles like sand, stones, inclined, declined surfaces, and other surprise elements. The points in this round are allotted based on the time taken to clear the event. The track will have curves too, to check the swiftness of the robot. There will be stages in the track where the robots can skip a hurdle, but a penalty will be considered for skipping a hurdle.
+          </p>
+          <p>
+            <strong>Bonus rounds:</strong><br> 
+            The robots then get an opportunity to demonstrate their weapons, these also add to the points allotted to the robot.
+          </p>
+          <p>
+            <strong>Arena:</strong><br>
+            Arena consists of a square surface made up of wood. The arena is covered by barricades to prevent parts of the robot flying out of the arena. The time allotted for a battle is 3 minutes. The robot has to either immobilize the opponent or throw it out of the arena. The robot to win the battle is allowed to continue in the event, the opponent is knocked out. The robot to reach the final battle and win it will grab the title of the championship.
+          </p>
+          <p class="line-break margin-top-30"></p>
+        </div>
+      </section> -->
+
+      <section>
+        <div class="parallax-robo-soccer">
+          <h2><em>Robo Soccer</em></h2>
+        </div>
+      </section>
+
+      <section>
+        <div class="block">
+          <p>
+            <span class="first-character">R</span>obo-soccer competitions bring together teams of intelligent robots
+            controlled by human operators.
+            These highly skilled robots navigate the field, showcasing their agility, precision, and strategic thinking.
+            The objective is to score goals by maneuvering the soccer ball past opponents and into the opposing team's
+            net. With advanced sensors, actuators, and algorithms, these robots swiftly respond to the ever-changing
+            game dynamics.
+            Robo-soccer competitions are a thrilling fusion of human ingenuity and robotic capabilities, where teamwork,
+            adaptability, and precise control determine the victorious team.
+          </p>
+          <p class="line-break margin-top-30"></p>
+        </div>
+      </section>
+      <div class="bottomTriangle-transparent90"></div>
+  </div>
+
+  <div class="topTriangle" id="2"></div>
+  <section class="gallery">
+
+    <h1>Expo Gallery</h1>
+    <div class="gallery-separator"></div>
+
+    <div class="row custom-row">
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/expo/robo1.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">A Robot that speaks</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/expo/robo1.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>The Bot that speaks to you</h2>
+              <p>
+                Imagine a robot that not only listens but responds! This bot communicates with you, taking voice
+                commands and giving feedback. Designed to make human-robot interaction easy and natural, this talking
+                bot is a glimpse into the future of robotics, where communication is seamless.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/expo/IMG_6107.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Gesture controlled bot</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/expo/IMG_6107.JPG" alt="">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Gesture Controlled Bot</h2>
+              <p>
+                Why press buttons when you can just wave your hand? This bot responds to your gestures, bringing
+                robotics under your direct control with simple hand movements. Designed with sensors to detect motion,
+                this bot showcases how intuitive human-machine interactions can be.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/expo/robo2.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Spider bot</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/expo/robo2.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Spider Bot</h2>
+              <p>
+                Eight legs, incredible agility, and spider-like movements—our Spider Bot is inspired by nature’s
+                ultimate climbers. Built to navigate challenging surfaces, it’s perfect for exploring tight spaces with
+                a creepy-crawly twist!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/line/robo3.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Line follower race</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/line/robo3.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Line Follower Arena</h2>
+              <p>
+                Put your bot’s skills to the test in the Line Follower Race! Watch as robots follow a designated line at
+                top speed, competing to see which bot can stay on track and cross the finish line first. Precision and
+                speed are the keys to victory here!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/line/L1.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Line followers</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/line/L1.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Line Followers</h2>
+              <p>
+                These robots follow the path wherever it may lead, using sensors to detect and stay on track. Perfect
+                for testing accuracy and automation, our Line Followers are designed to navigate with ease, making them
+                ideal for races or maze-solving challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/race/IMG_6328.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Death Race</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/race/IMG_6328.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Deth Race - Bumpy terrain</h2>
+              <p>
+                An extreme test of durability and stability, the Death Race on Bumpy Terrain pits bots against rough
+                obstacles and uneven ground. Only the toughest and most resilient robots can handle this chaotic course!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/race/IMG_6356.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Death Race</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/race/IMG_6356.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Death Race - Rocky terrain</h2>
+              <p>
+                Rocks, rubble, and relentless competition define this Death Race. On rocky terrain, robots must conquer
+                sharp inclines, boulders, and treacherous obstacles, showing off their balance, endurance, and raw
+                power.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/race/IMG_9828.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Race Bot</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/race/IMG_9828.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Our Race Bot!</h2>
+              <p>
+                Built for speed and agility, the Race Bot is designed to zoom past competitors in a high-speed dash.
+                These bots are all about performance, with optimized designs for racing tracks, quick turns, and a rush
+                of adrenaline!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/war/IMG_6376.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Botwars</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/war/IMG_6376.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Lets get fighting!</h2>
+              <p>
+                Enter the battlefield of Botwars, where strategy, strength, and skill come together. Bots face off in
+                thrilling combat, pushing each other to the limit in a contest of engineering and tactics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/war/IMG_6377.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Botwars</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/war/IMG_6377.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>Smoke comes after fire 🔥</h2>
+              <p>
+                Meet the Warbot, a specialized battle bot designed for tactical prowess and power. Armed and armored,
+                this bot takes on the toughest of competitors in robotic warfare. Built to dominate, the Warbot embodies
+                strength, resilience, and cutting-edge design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/war/IMG_6401.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Botwars</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/war/IMG_6401.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>All set to CHARGE!</h2>
+              <p>
+                Botwars is where creativity meets competition! Teams of bots face off in thrilling challenges, using
+                tactics, teamwork, and clever engineering to outmaneuver each other. From high-speed sprints to obstacle
+                dodging, each Botwars round tests a bot's agility, endurance, and strategy. It’s more than just a
+                battle—it’s a showcase of innovation, pushing every bot to its limits!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 custom-column">
+        <div class="container noselect">
+          <div class="canvas">
+            <div class="tracker tr-1"></div>
+            <div class="tracker tr-2"></div>
+            <div class="tracker tr-3"></div>
+            <div class="tracker tr-4"></div>
+            <div class="tracker tr-5"></div>
+            <div class="tracker tr-6"></div>
+            <div class="tracker tr-7"></div>
+            <div class="tracker tr-8"></div>
+            <div class="tracker tr-9"></div>
+            <div class="tracker tr-10"></div>
+            <div class="tracker tr-11"></div>
+            <div class="tracker tr-12"></div>
+            <div class="tracker tr-13"></div>
+            <div class="tracker tr-14"></div>
+            <div class="tracker tr-15"></div>
+            <div class="tracker tr-16"></div>
+            <div class="tracker tr-17"></div>
+            <div class="tracker tr-18"></div>
+            <div class="tracker tr-19"></div>
+            <div class="tracker tr-20"></div>
+            <div class="tracker tr-21"></div>
+            <div class="tracker tr-22"></div>
+            <div class="tracker tr-23"></div>
+            <div class="tracker tr-24"></div>
+            <div class="tracker tr-25"></div>
+            <div id="card">
+              <div class="image-container">
+                <img src="assets/war/IMG_9859.JPG" alt="" loading="lazy">
+              </div>
+              <div class="title">Warbot</div>
+            </div>
+          </div>
+        </div>
+        <div class="custom-modal">
+          <span class="close">&times;</span>
+          <div class="row custom-modal-content">
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <img src="assets/war/IMG_9859.JPG" alt="" loading="lazy">
+            </div>
+            <div class="col-sm-12 col-md-6 custom-col-extension">
+              <h2>We wage wars!</h2>
+              <p>
+                Enter the world of Warbot, where heavyweight bots are built to withstand anything. Each Warbot is a
+                powerhouse, crafted with reinforced armor, custom features, and a unique design that’s ready for
+                intense, one-on-one combat. In these epic face-offs, it’s all about brute strength, resilience, and
+                engineering genius. Watch as Warbots clash in the ultimate battle for robotic supremacy!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <div class="bottomTriangle-transparent90" id="3"></div>
+
+  <div class="transparent3">
+    <ul>
+      <li>
+        <a href="mailto: support@roboticsclubnie.in">
+          <div class="social">Email: support@roboticsclubnie.in</div>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/roboticsclub_nie">
+          <div class="social">Instagram: roboticsclub_nie</div>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/roboticsclub-nie">
+          <div class="social">Github: roboticsclub-nie</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom Scripts -->
+  <script type="text/javascript" src="rikishi.js"></script>
+
+</body>
+
+</html>
