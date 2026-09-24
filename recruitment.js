@@ -5,7 +5,7 @@
  */
 
 // Configuration: Google Apps Script Web App URL for cloud backup (optional/dual sync)
-const GOOGLE_SHEET_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyi81vO2_Z9nKkUjS3Q4y1tQ-RoboticsClubNIE/exec";
+const GOOGLE_SHEET_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxJmWqZ3WW4iuL4ag-AFd0ishWiKJlYMpZdqZz3cIHSSGEqgdn5OqcE_lxjK38hNg2s/exec";
 
 // Local storage key for offline device backup
 const STORAGE_KEY = "nie_robotics_recruitment_registrations";
