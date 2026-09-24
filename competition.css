@@ -1,0 +1,314 @@
+/* ============================================================================
+   ROBOTICS CLUB NIE — competition.css
+   Modern, responsive showcase for national competitions & collegiate arenas
+   ============================================================================ */
+
+/* ============================================================
+   HEADER & INTRO SECTION
+   ============================================================ */
+.competition-header-section {
+  padding-top: calc(var(--nav-h, 70px) + 35px);
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.competition-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(0, 234, 255, 0.1);
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  color: var(--cyan-glow, #00eaff);
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+  margin-bottom: 16px;
+}
+
+.competition-title {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #ffffff 30%, #00eaff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.competition-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #94a3b8;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 0 16px;
+}
+
+/* ============================================================
+   COMPETITIONS SHOWCASE GRID
+   ============================================================ */
+.competition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 35px auto 70px;
+  padding: 0 20px;
+}
+
+.competition-card {
+  background: rgba(0, 18, 38, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 234, 255, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.competition-card:hover {
+  transform: translateY(-8px);
+  border-color: #00eaff;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(0, 234, 255, 0.3);
+}
+
+.competition-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #000a16;
+}
+
+.competition-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.competition-card:hover .competition-img-wrap img {
+  transform: scale(1.08);
+}
+
+.competition-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(0, 10, 24, 0.88);
+  border: 1px solid rgba(0, 234, 255, 0.4);
+  color: #00eaff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  letter-spacing: 0.5px;
+}
+
+.competition-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.competition-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  transition: color 0.25s ease;
+}
+
+.competition-card:hover .competition-card-title {
+  color: #00eaff;
+}
+
+.competition-card-desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.competition-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 234, 255, 0.12);
+  padding-top: 12px;
+  font-size: 0.82rem;
+  color: #64748b;
+}
+
+.competition-view-btn {
+  color: #00eaff;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================================
+   LIGHTBOX MODAL
+   ============================================================ */
+.competition-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 6, 16, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.competition-lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.competition-lightbox-container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(0, 18, 40, 0.96);
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 234, 255, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.competition-lightbox-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.competition-lightbox-close-btn:hover {
+  background: #ff4757;
+  border-color: #ff4757;
+  transform: rotate(90deg);
+}
+
+.competition-lightbox-stage {
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 50vh, 500px);
+  background: #00040a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.competition-lightbox-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.competition-lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(0, 18, 38, 0.8);
+  border: 1px solid rgba(0, 234, 255, 0.4);
+  color: #00eaff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.competition-lightbox-nav-btn:hover {
+  background: #00eaff;
+  color: #000814;
+  box-shadow: 0 0 15px #00eaff;
+}
+
+.competition-lightbox-prev-btn { left: 14px; }
+.competition-lightbox-next-btn { right: 14px; }
+
+.competition-lightbox-info {
+  padding: 18px 24px;
+  background: rgba(0, 12, 28, 0.95);
+  border-top: 1px solid rgba(0, 234, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.competition-lightbox-info h4 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.competition-lightbox-info p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.competition-lightbox-counter {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+  .competition-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .competition-lightbox-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
