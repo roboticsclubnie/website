@@ -1,0 +1,456 @@
+/* ============================================================================
+   ROBOTICS CLUB NIE — Alumni.css
+   Interactive Alumni & Core Team Gallery with Lightbox and Category Filters
+   ============================================================================ */
+
+body {
+  background-color: var(--navy-dark, #000814) !important;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(0, 180, 216, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(25, 49, 159, 0.12) 0%, transparent 40%),
+    url("images/bgimg3.png") !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  color: #f1f5f9;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   HEADER & QUOTE SECTION
+   ============================================================ */
+.alumni-header-section {
+  padding-top: calc(var(--nav-h, 75px) + 40px);
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.alumni-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(0, 234, 255, 0.1);
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  color: var(--cyan-glow, #00eaff);
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+  margin-bottom: 16px;
+}
+
+.alumni-title {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #ffffff 30%, #00eaff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.alumni-quote-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.alumni-quote {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-style: italic;
+  color: #b8d8ff;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.alumni-quote-author {
+  color: #00eaff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   INTERACTIVE CATEGORY FILTER TABS
+   ============================================================ */
+.gallery-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px auto 40px;
+  padding: 0 15px;
+  max-width: 800px;
+}
+
+.filter-btn {
+  background: rgba(0, 20, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  color: #94a3b8;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-btn:hover {
+  color: #ffffff;
+  border-color: #00eaff;
+  background: rgba(0, 33, 69, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 234, 255, 0.2);
+}
+
+.filter-btn.active {
+  color: #00eaff;
+  background: rgba(0, 234, 255, 0.15);
+  border-color: #00eaff;
+  box-shadow: 0 0 16px rgba(0, 234, 255, 0.3);
+  font-weight: 600;
+}
+
+/* ============================================================
+   INTERACTIVE GALLERY GRID & CARDS
+   ============================================================ */
+.interactive-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto 70px;
+  padding: 0 20px;
+}
+
+.interactive-gallery-card {
+  background: rgba(0, 18, 38, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 234, 255, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.interactive-gallery-card:hover {
+  transform: translateY(-8px);
+  border-color: #00eaff;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(0, 234, 255, 0.3);
+}
+
+.interactive-gallery-card.hide {
+  display: none !important;
+}
+
+.interactive-gallery-card.show {
+  animation: cardFadeIn 0.4s ease forwards;
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.card-img-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #000a16;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.interactive-gallery-card:hover .card-img-container img {
+  transform: scale(1.08);
+  filter: brightness(1.08);
+}
+
+.card-badge-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+.gallery-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0, 14, 30, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 234, 255, 0.4);
+  color: #00eaff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00eaff;
+  box-shadow: 0 0 6px #00eaff;
+}
+
+.card-zoom-hint {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  color: #00eaff;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 234, 255, 0.3);
+}
+
+.interactive-gallery-card:hover .card-zoom-hint {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card-caption-body {
+  padding: 18px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 234, 255, 0.1);
+  background: rgba(0, 16, 36, 0.6);
+}
+
+.gallery-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px;
+  transition: color 0.2s ease;
+}
+
+.interactive-gallery-card:hover .gallery-card-title {
+  color: #00eaff;
+}
+
+.gallery-card-desc {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================================
+   INTERACTIVE FULLSCREEN LIGHTBOX MODAL
+   ============================================================ */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 8, 20, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-dialog {
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  background: rgba(0, 16, 36, 0.95);
+  border: 1px solid rgba(0, 234, 255, 0.3);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 234, 255, 0.2);
+  transform: scale(0.92);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-modal.active .lightbox-dialog {
+  transform: scale(1);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 234, 255, 0.3);
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: #ff4757;
+  border-color: #ff4757;
+  transform: scale(1.1);
+}
+
+.lightbox-img-stage {
+  position: relative;
+  background: #000612;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 65vh;
+  overflow: hidden;
+}
+
+.lightbox-img-stage img {
+  max-width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 16, 36, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 234, 255, 0.4);
+  color: #00eaff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 5;
+}
+
+.lightbox-nav-btn:hover {
+  background: #00eaff;
+  color: #000814;
+  box-shadow: 0 0 18px #00eaff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev-btn { left: 14px; }
+.lightbox-next-btn { right: 14px; }
+
+.lightbox-info-bar {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 12, 28, 0.9);
+  border-top: 1px solid rgba(0, 234, 255, 0.15);
+}
+
+.lightbox-text-group h4 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.lightbox-text-group p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.lightbox-meta-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lightbox-counter {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+  .interactive-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .alumni-title {
+    font-size: 2.2rem;
+  }
+
+  .lightbox-info-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .lightbox-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}
