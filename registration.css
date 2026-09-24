@@ -1,0 +1,195 @@
+/* ============================================================================
+   ROBOTICS CLUB NIE — registration.css
+   Modern, responsive status portal for Roborikishi event registration
+   ============================================================================ */
+
+/* ============================================================
+   HEADER SECTION
+   ============================================================ */
+.reg-header-section {
+  padding-top: calc(var(--nav-h, 70px) + 35px);
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.reg-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(0, 234, 255, 0.1);
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  color: var(--cyan-glow, #00eaff);
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+  margin-bottom: 16px;
+}
+
+.reg-title {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #ffffff 30%, #00eaff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.reg-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #94a3b8;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 0 16px;
+}
+
+/* ============================================================
+   CARDS CONTAINER
+   ============================================================ */
+.reg-container {
+  max-width: 860px;
+  margin: 35px auto 70px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.reg-glass-card {
+  background: rgba(0, 18, 38, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 234, 255, 0.22);
+  border-radius: 18px;
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.reg-glass-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan-glow), transparent);
+}
+
+.reg-status-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 15px rgba(0, 234, 255, 0.4));
+}
+
+.reg-status-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(0, 234, 255, 0.12);
+  border: 1px solid rgba(0, 234, 255, 0.35);
+  color: var(--cyan-glow);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.reg-card-title {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.reg-card-desc {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto 28px;
+}
+
+.reg-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.reg-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-spring, ease);
+  cursor: pointer;
+}
+
+.reg-btn-primary {
+  background: linear-gradient(135deg, rgb(65, 182, 200), rgb(25, 49, 159));
+  color: #ffffff;
+  border: 1px solid rgba(0, 234, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+}
+
+.reg-btn-primary:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 234, 255, 0.45);
+}
+
+.reg-btn-secondary {
+  background: rgba(0, 20, 45, 0.7);
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  color: #b8d8ff;
+}
+
+.reg-btn-secondary:hover {
+  background: rgba(0, 234, 255, 0.15);
+  border-color: var(--cyan-glow);
+  color: #00eaff;
+  transform: translateY(-3px);
+}
+
+/* Category Grid */
+.reg-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.reg-category-item {
+  background: rgba(0, 10, 24, 0.75);
+  border: 1px solid rgba(0, 234, 255, 0.15);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.reg-category-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.reg-category-item span {
+  font-size: 0.8rem;
+  color: #00eaff;
+  font-weight: 600;
+}
