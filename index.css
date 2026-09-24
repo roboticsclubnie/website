@@ -1,0 +1,1669 @@
+/* ========================================================
+   ROBOTICS CLUB NIE — index.css (Responsive + Animated)
+   Colors preserved, style aligned with Accommodations page
+   ======================================================== */
+
+/* Reset & base */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Palette and --nav-h now live in theme.css, which every page loads first.
+   The home page is the only page with the scrolling banner above the navbar,
+   so it is the only page that overrides --banner-h; that feeds the
+   scroll-padding-top in theme.css so in-page anchors clear the header. */
+:root {
+	--banner-h: 28px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background-image: url("images/bgimg3.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	font-family: 'Space Grotesk', sans-serif;
+	overflow-x: hidden;
+}
+
+/* ============================================================
+   PRELOADER
+   ============================================================ */
+.preloader {
+	position: fixed;
+	inset: 0;
+	background-image: url("images/bgimg3.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* CSS-only self-dismissal. The overlay used to be removed by JS alone, so a
+	   script error or a blocked index.js left the whole site hidden behind it.
+	   This guarantees it clears itself; JS still removes it early on fast loads. */
+	animation: preloaderOut 0.4s ease 1.75s forwards;
+}
+
+.preloader img {
+	width: clamp(120px, 22vw, 300px);
+	height: auto;
+	animation: preloaderShrink 0.75s ease-in-out 1s forwards;
+}
+
+@keyframes preloaderOut {
+	to {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+
+@keyframes preloaderShrink {
+	0% {
+		transform: scale(1) translateY(0);
+		opacity: 1;
+	}
+
+	80% {
+		transform: scale(0.3) translateY(-40vh);
+		opacity: 0.8;
+	}
+
+	100% {
+		transform: scale(0.25) translateY(-50vh);
+		opacity: 0;
+	}
+}
+
+/* ============================================================
+   NAVBAR-SCROLLER
+   ============================================================ */
+.navbanner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 28px;
+	overflow: hidden;
+	background: linear-gradient(90deg, var(--navy-dark), #001a33, var(--navy-dark));
+	color: var(--cyan-glow);
+	white-space: nowrap;
+	line-height: 28px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-weight: 500;
+	letter-spacing: 1px;
+	border-bottom: 1px solid rgba(0, 234, 255, 0.3);
+	z-index: 110;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	display: block;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbanner:hover {
+	color: #fff;
+	background: linear-gradient(90deg, #001a33, var(--navy-mid), #001a33);
+}
+
+.navbanner:hover p {
+	animation-play-state: paused;
+}
+
+.navbanner p {
+	display: inline-block;
+	padding-left: 100%;
+	animation: scrollText 22s linear infinite;
+	margin: 0;
+	font-size: clamp(12px, 2.5vmin, 14px);
+	text-shadow: 0 0 5px rgba(0, 234, 255, 0.4);
+}
+
+.nav-separator {
+	margin: 0 15px;
+	color: var(--cyan);
+	opacity: 0.7;
+}
+
+/* Currently unused: no element on any page carries id="event-countdown", and no
+   script creates one. Kept rather than deleted because it is plainly written for
+   the next event's countdown, the same reason the unused .hero-section /
+   .schedule-* blocks were kept in rikishi.css. Delete it if that feature is not
+   coming back. */
+#event-countdown {
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 0 0 8px rgba(0, 234, 255, 0.8);
+}
+
+@keyframes scrollText {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+/* ============================================================
+   NAVBAR styles now reside in theme.css as the single source of truth.
+   ============================================================ */
+
+/* ============================================================
+   INTRO SECTION
+   ============================================================ */
+#intro {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 0;
+	background-image: url("images/bgimg3.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.flex-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: clamp(80px, 20vh, 160px) 5vw 0;
+	width: 100%;
+	max-width: 640px;
+}
+
+.flex-wrapper2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: clamp(30px, 7vh, 70px) clamp(16px, 8vw, 100px) 0;
+	width: 100%;
+	max-width: 700px;
+}
+
+/* Quote card */
+#club {
+	width: 100%;
+	background: transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	animation: fadeInUp 0.9s ease 1.8s both;
+}
+
+.headquote {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(13, 44, 78, 0.9);
+	border-top-left-radius: clamp(12px, 2vw, 20px);
+	border-top-right-radius: clamp(12px, 2vw, 20px);
+	border: 1px solid rgba(65, 182, 200, 0.3);
+	border-bottom: none;
+}
+
+.head {
+	flex: 1;
+}
+
+#head {
+	font-family: 'Space Grotesk', sans-serif;
+	font-weight: 600;
+	font-size: clamp(18px, 4.5vmin, 32px);
+	color: var(--cyan);
+	padding: 1rem 1.5rem 1rem;
+	margin: 0;
+}
+
+.QMark {
+	padding-right: clamp(10px, 2vw, 20px);
+	flex-shrink: 0;
+}
+
+#QMark {
+	width: clamp(30px, 10vmin, 56px);
+	/* The markup carries width/height attributes so the browser can reserve the
+	   right box before the image decodes. This rule overrides only the width, so
+	   without `height: auto` the raw height attribute (1284) is used verbatim and
+	   the quotation mark renders as a 56x1284 sliver that stretches .headquote to
+	   full page height. Any image whose CSS sets one dimension must free the other. */
+	height: auto;
+	display: block;
+}
+
+.contents {
+	width: 100%;
+	background-color: rgba(13, 44, 78, 0.9);
+	border-bottom-left-radius: clamp(12px, 2vw, 20px);
+	border-bottom-right-radius: clamp(12px, 2vw, 20px);
+	border: 1px solid rgba(65, 182, 200, 0.3);
+	border-top: none;
+	padding: 0 1.5rem 1.5rem;
+}
+
+#quote {
+	font-family: 'Sono', sans-serif;
+	font-size: clamp(13px, 2.4vmin, 17px);
+	font-weight: 300;
+	color: var(--white);
+	text-align: justify;
+	line-height: 1.7;
+	margin: 0 0 0.5rem;
+	padding-top: 1rem;
+}
+
+#quoteauth {
+	font-family: 'Sono', sans-serif;
+	font-size: clamp(12px, 2.2vmin, 15px);
+	font-weight: 500;
+	color: var(--white);
+	text-align: right;
+	margin: 0;
+}
+
+/* Carousel */
+.images {
+	width: 100%;
+	border-radius: clamp(12px, 2.5vw, 24px);
+	overflow: hidden;
+	border: 1px solid rgba(65, 182, 200, 0.25);
+	animation: fadeInUp 0.9s ease 2.1s both;
+}
+
+.custom-image {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+
+/* Animated logo below intro */
+.animateLogo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: clamp(60px, 15vw, 140px) 0 clamp(30px, 5vw, 60px);
+	width: 100%;
+}
+
+#logo {
+	width: clamp(160px, 22vw, 300px);
+	height: auto;
+	display: block;
+}
+
+/* Triangle dividers */
+.topTriangle-withoutTransparencychange {
+	width: 0;
+	height: 0;
+	border-right: 100vw solid var(--cyan);
+	border-top: 8vw solid transparent;
+}
+
+.topTriangle {
+	width: 0;
+	height: 0;
+	border-right: 100vw solid var(--cyan);
+	border-top: 8vw solid rgba(65, 182, 200, 0.2);
+}
+
+.bottomTriangle {
+	width: 0;
+	height: 0;
+	border-left: 100vw solid var(--cyan);
+	border-bottom: 8vw solid rgba(65, 182, 200, 0.2);
+}
+
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+.About {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	z-index: 5;
+	font-family: 'Space Grotesk', sans-serif;
+	padding: 0 clamp(16px, 10vw, 140px) 2rem;
+	background-color: var(--cyan);
+}
+
+.title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Space Grotesk', sans-serif;
+	color: var(--navy);
+}
+
+.title h1 {
+	margin: 2.5rem 0 0;
+	font-size: clamp(24px, 5vmin, 40px);
+}
+
+.separator {
+	background: var(--navy-mid);
+	display: block;
+	height: 3px;
+	width: clamp(40px, 8vmin, 80px);
+	border-radius: 2px;
+	margin: 0.75rem auto 1rem;
+}
+
+.textbox_pax {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 900px;
+}
+
+.textbox_pax p {
+	font-family: 'Space Grotesk', sans-serif;
+	color: var(--navy-mid);
+	margin: 1rem 0;
+	font-size: clamp(14px, 2.3vmin, 17px);
+	text-align: justify;
+	line-height: 1.8;
+}
+
+/* Parallax sections */
+.grppic {
+	background-image: url("images/grppic-web.jpg");
+}
+
+.workshop_event_pic {
+	background-image: url("images/workshop1-web.jpg");
+}
+
+.grppic,
+.workshop_event_pic {
+	width: 100%;
+	height: clamp(200px, 40vw, 500px);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.transparent {
+	background-color: rgba(65, 182, 200, 0.2);
+	width: 100%;
+	height: clamp(60px, 24.1vw, 300px);
+}
+
+/* ============================================================
+   GALLERY SECTION
+   ============================================================ */
+/* width/height 0 to match .topTriangle / .bottomTriangle above. These relied on
+   border-box collapsing them, which broke if the box model ever changed. */
+.topflipTriangle {
+	width: 0;
+	height: 0;
+	border-left: 100vw solid var(--navy);
+	border-top: 8vw solid rgba(65, 182, 200, 0.2);
+}
+
+.bottomflipTriangle {
+	width: 0;
+	height: 0;
+	border-right: 100vw solid var(--navy);
+	border-bottom: 8vw solid transparent;
+}
+
+.topflipTriangle::after,
+.topflipTriangle::before,
+.bottomflipTriangle::after,
+.bottomflipTriangle::before {
+	display: none;
+}
+
+.gallery {
+	background-color: var(--navy);
+	padding-bottom: 3rem;
+}
+
+.gallery h1 {
+	margin: 0;
+	padding: 1.5rem 0 0.25rem;
+	text-align: center;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: clamp(28px, 6vmin, 52px);
+	color: var(--white);
+}
+
+.gallery-separator {
+	background: var(--cyan);
+	display: block;
+	height: 3px;
+	width: clamp(40px, 8vmin, 80px);
+	border-radius: 2px;
+	margin: 0.5rem auto 1.5rem;
+}
+
+.grid-container {
+	margin: 0 auto;
+	padding: 0 clamp(12px, 5vw, 80px);
+	max-width: 1200px;
+	width: 100%;
+}
+
+.grid-item {
+	padding: clamp(8px, 1vw, 14px);
+	font-family: 'Oswald', sans-serif;
+	font-size: clamp(13px, 1.5vw, 18px);
+	line-height: 1.5;
+}
+
+/* Gallery link */
+.grid-item a {
+	text-decoration: none;
+	color: whitesmoke;
+	cursor: pointer;
+	display: block;
+	position: relative;
+}
+
+.grid-item a::after {
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--cyan-glow);
+	box-shadow: 0 0 8px var(--cyan-glow);
+	transition: width 0.4s ease;
+}
+
+.grid-item a:hover {
+	color: var(--cyan-glow);
+}
+
+.grid-item a:hover::after {
+	width: 100%;
+}
+
+/* Image containers */
+.up1,
+.up2,
+.up3,
+.up4,
+.up5,
+.up6 {
+	width: 100%;
+	height: clamp(200px, 34vh, 360px);
+	position: relative;
+	overflow: hidden;
+	border-radius: clamp(12px, 1.8vw, 18px);
+	border: 1px solid rgba(0, 234, 255, 0.2);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+	cursor: pointer;
+	background: #000c1e;
+}
+
+.gallery-card-badge {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	z-index: 4;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	background: rgba(0, 14, 30, 0.88);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border: 1px solid rgba(0, 234, 255, 0.4);
+	color: #00eaff;
+	font-size: 0.8rem;
+	font-weight: 600;
+	padding: 5px 12px;
+	border-radius: 20px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+	letter-spacing: 0.3px;
+}
+
+.gallery-explore-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	margin-top: 8px;
+	color: #00eaff;
+	font-weight: 600;
+	font-size: 0.88rem;
+	letter-spacing: 0.3px;
+	text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+}
+
+.up1 img,
+.up2 img,
+.up3 img,
+.up4 img,
+.up5 img,
+.up6 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+	display: block;
+}
+
+.up1:hover img,
+.up2:hover img,
+.up3:hover img,
+.up4:hover img,
+.up5:hover img,
+.up6:hover img {
+	transform: scale(1.08);
+	filter: brightness(1.1);
+}
+
+.up1:hover,
+.up2:hover,
+.up3:hover,
+.up4:hover,
+.up5:hover,
+.up6:hover {
+	transform: translateY(-8px);
+	border-color: #00eaff;
+	box-shadow: 
+		0 20px 40px rgba(0, 0, 0, 0.6),
+		0 0 25px rgba(0, 234, 255, 0.3);
+}
+
+/* Description overlay */
+.desc1,
+.desc2,
+.desc3,
+.desc4,
+.desc5,
+.desc6 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(0deg, rgba(0, 8, 20, 0.95) 0%, rgba(0, 16, 36, 0.88) 75%, transparent 100%);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	color: #f1f5f9;
+	font-family: 'Space Grotesk', sans-serif;
+	font-weight: 400;
+	font-size: clamp(13px, 1.8vmin, 16px);
+	line-height: 1.5;
+	padding: 1.5rem 1.25rem 1.25rem;
+	opacity: 0;
+	transform: translateY(15px);
+	transition: opacity 0.35s ease, transform 0.35s ease;
+	border-top: 1px solid rgba(0, 234, 255, 0.35);
+	display: block !important;
+	z-index: 3;
+}
+
+.up1:hover .desc1,
+.up2:hover .desc2,
+.up3:hover .desc3,
+.up4:hover .desc4,
+.up5:hover .desc5,
+.up6:hover .desc6 {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Gallery headings. This was `div h2`, which styled every h2 inside any div on
+   the page — scoped to the gallery captions it was actually written for. */
+.down1 h2,
+.down2 h2,
+.down3 h2,
+.down4 h2,
+.down5 h2,
+.down6 h2 {
+	margin-top: clamp(8px, 1vw, 14px);
+	margin-bottom: clamp(8px, 1.5vw, 18px);
+	color: var(--cyan);
+	font-weight: 400;
+	transition: color 0.4s ease, text-shadow 0.4s ease;
+	font-size: clamp(16px, 2.5vmin, 26px);
+}
+
+.down1 h2:hover,
+.down2 h2:hover,
+.down3 h2:hover,
+.down4 h2:hover,
+.down5 h2:hover,
+.down6 h2:hover {
+	color: var(--cyan-glow);
+	text-shadow: 0 0 14px var(--cyan-glow), 0 0 28px #0077ff;
+}
+
+/* ============================================================
+   BEFORE CONTACT DIVIDERS
+   ============================================================ */
+.topflipTriangle2 {
+	width: 0;
+	height: 0;
+	border-left: 100vw solid var(--navy);
+	border-top: 8vw solid transparent;
+}
+
+.bottomflipTriangle2 {
+	width: 0;
+	height: 0;
+	/* Overlaps the navy gallery above by 1vw so no hairline seam shows through. */
+	margin-top: -1vw;
+	border-right: 100vw solid var(--navy);
+	border-bottom: 8vw solid transparent;
+}
+
+.transparent2 {
+	width: 100%;
+	height: clamp(30px, 10vmin, 80px);
+}
+
+.before-contactUs {
+	background-image: url("images/bgimg3.png");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* ============================================================
+   CONTACT SECTION (IMMERSIVE & INTERACTIVE)
+   ============================================================ */
+#contact {
+	background: radial-gradient(circle at 50% 10%, rgba(0, 180, 216, 0.12) 0%, transparent 50%),
+	            radial-gradient(circle at 80% 90%, rgba(25, 49, 159, 0.15) 0%, transparent 60%),
+	            #000a18;
+	padding: clamp(40px, 6vw, 80px) clamp(16px, 6vw, 60px);
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Subtle cybernetic scanline backdrop */
+#contact::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 3px,
+		rgba(0, 234, 255, 0.015) 3px,
+		rgba(0, 234, 255, 0.015) 6px
+	);
+	pointer-events: none;
+}
+
+.contact-header-wrap {
+	text-align: center;
+	margin-bottom: clamp(30px, 5vmin, 50px);
+	position: relative;
+	z-index: 2;
+}
+
+.contact-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 18px;
+	border-radius: 30px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	background: rgba(0, 234, 255, 0.1);
+	border: 1px solid rgba(0, 234, 255, 0.35);
+	color: var(--cyan-glow);
+	box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+	margin-bottom: 12px;
+}
+
+#contact-heading {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: clamp(28px, 5vmin, 44px);
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: -0.5px;
+	margin: 0 0 10px;
+	background: linear-gradient(135deg, #ffffff 40%, var(--cyan-glow) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: 100%;
+}
+
+.contact-subheading {
+	color: #94a3b8;
+	font-size: clamp(14px, 2vmin, 17px);
+	max-width: 620px;
+	margin: 0 auto;
+	line-height: 1.6;
+}
+
+/* Three Cards Grid */
+#left {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+	gap: clamp(18px, 3vmin, 30px);
+	align-items: stretch;
+	max-width: 1200px;
+	margin: 0 auto clamp(30px, 5vmin, 50px);
+	position: relative;
+	z-index: 2;
+}
+
+/* Modern Glassmorphic Contact Card */
+.contact-card,
+#add,
+#lec,
+#team {
+	background: rgba(0, 18, 38, 0.78);
+	border-radius: 18px;
+	border: 1px solid rgba(0, 234, 255, 0.25);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	padding: clamp(20px, 3.5vmin, 32px);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+	transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	overflow: hidden;
+}
+
+.contact-card::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, var(--cyan-glow), transparent);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.contact-card:hover {
+	transform: translateY(-8px);
+	border-color: rgba(0, 234, 255, 0.6);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 234, 255, 0.25);
+}
+
+.contact-card:hover::after {
+	opacity: 1;
+}
+
+.contact-card-header {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 18px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid rgba(0, 234, 255, 0.15);
+}
+
+.contact-icon {
+	font-size: 1.5rem;
+	filter: drop-shadow(0 0 8px rgba(0, 234, 255, 0.5));
+}
+
+#add h2,
+#lec h2,
+#team h2,
+#add h1,
+#lec h1,
+#team h1 {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: clamp(18px, 2.5vmin, 22px);
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0;
+	letter-spacing: 0.5px;
+}
+
+/* Card 1: Address */
+.contact-card-content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+}
+
+.contact-org-title {
+	font-size: 1.1rem;
+	color: var(--cyan-glow);
+	margin-bottom: 6px;
+}
+
+.contact-address-text {
+	color: #cbd5e1;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin-bottom: 18px;
+}
+
+/* HUD Live Status */
+.contact-hud-status {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px;
+	background: rgba(0, 10, 25, 0.85);
+	border: 1px dashed rgba(0, 234, 255, 0.4);
+	border-radius: 8px;
+	margin-bottom: 20px;
+	width: fit-content;
+}
+
+.hud-ping-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #00ff88;
+	box-shadow: 0 0 8px #00ff88;
+	animation: radarPing 1.8s infinite ease-in-out;
+}
+
+@keyframes radarPing {
+	0%, 100% { transform: scale(1); opacity: 1; }
+	50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.hud-coords {
+	font-family: 'Sono', monospace;
+	font-size: 0.8rem;
+	color: #94a3b8;
+}
+
+.hud-tag {
+	font-size: 0.72rem;
+	color: #00ff88;
+	background: rgba(0, 255, 136, 0.12);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+/* Buttons Cluster */
+.contact-actions-cluster {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: auto;
+}
+
+.contact-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	padding: 8px 16px;
+	border-radius: 8px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 0.88rem;
+	font-weight: 600;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.25s ease;
+	border: 1px solid transparent;
+}
+
+.contact-btn-primary {
+	background: rgba(0, 234, 255, 0.15);
+	border-color: rgba(0, 234, 255, 0.5);
+	color: #ffffff;
+}
+
+.contact-btn-primary:hover {
+	background: var(--cyan-glow);
+	color: #000814;
+	box-shadow: 0 0 15px rgba(0, 234, 255, 0.4);
+	transform: translateY(-2px);
+}
+
+.contact-btn-ghost {
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(255, 255, 255, 0.15);
+	color: #cbd5e1;
+}
+
+.contact-btn-ghost:hover {
+	background: rgba(255, 255, 255, 0.12);
+	border-color: rgba(0, 234, 255, 0.3);
+	color: #ffffff;
+	transform: translateY(-2px);
+}
+
+/* Card 2: Faculty Advisors */
+.faculty-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.faculty-profile {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 12px 14px;
+	border-radius: 12px;
+	background: rgba(0, 10, 24, 0.6);
+	border: 1px solid rgba(0, 234, 255, 0.12);
+	transition: all 0.3s ease;
+}
+
+.faculty-profile:hover {
+	background: rgba(0, 20, 45, 0.85);
+	border-color: rgba(0, 234, 255, 0.4);
+	transform: translateX(4px);
+}
+
+.faculty-avatar-wrap {
+	position: relative;
+	width: 64px;
+	height: 64px;
+	flex-shrink: 0;
+}
+
+.faculty-avatar-wrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 2px solid var(--cyan-glow);
+	box-shadow: 0 0 10px rgba(0, 234, 255, 0.3);
+}
+
+.faculty-details h3 {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.05rem;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0 0 4px;
+}
+
+.faculty-role-badge {
+	display: inline-block;
+	font-size: 0.75rem;
+	font-weight: 600;
+	padding: 2px 8px;
+	border-radius: 20px;
+	background: rgba(0, 234, 255, 0.15);
+	color: var(--cyan-glow);
+	border: 1px solid rgba(0, 234, 255, 0.3);
+	margin-bottom: 4px;
+}
+
+.faculty-dept {
+	font-size: 0.82rem;
+	color: #94a3b8;
+	margin: 0;
+}
+
+/* Card 3: Core Leadership */
+.core-leaders-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.leader-item {
+	padding: 14px 16px;
+	border-radius: 12px;
+	background: rgba(0, 10, 24, 0.65);
+	border: 1px solid rgba(0, 234, 255, 0.15);
+	transition: all 0.3s ease;
+}
+
+.leader-item:hover {
+	background: rgba(0, 22, 50, 0.85);
+	border-color: rgba(0, 234, 255, 0.45);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.leader-name-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 6px;
+}
+
+.leader-name-row h3 {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1.15rem;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0;
+}
+
+.leader-badge {
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 3px 10px;
+	border-radius: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.captain-badge {
+	background: rgba(0, 234, 255, 0.18);
+	color: #00eaff;
+	border: 1px solid rgba(0, 234, 255, 0.45);
+}
+
+.vice-captain-badge {
+	background: rgba(147, 51, 234, 0.18);
+	color: #c084fc;
+	border: 1px solid rgba(192, 132, 252, 0.45);
+}
+
+.leader-phone-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: #cbd5e1;
+	text-decoration: none;
+	font-family: 'Sono', monospace;
+	font-size: 0.95rem;
+	font-weight: 600;
+	transition: color 0.2s ease;
+	margin-bottom: 12px;
+}
+
+.leader-phone-link:hover {
+	color: var(--cyan-glow);
+}
+
+.leader-action-bar {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.leader-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 12px;
+	border-radius: 6px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border: 1px solid transparent;
+}
+
+.call-btn {
+	background: rgba(0, 234, 255, 0.12);
+	border-color: rgba(0, 234, 255, 0.35);
+	color: #00eaff;
+}
+
+.call-btn:hover {
+	background: #00eaff;
+	color: #000814;
+	box-shadow: 0 0 12px rgba(0, 234, 255, 0.4);
+}
+
+.wa-btn {
+	background: rgba(37, 211, 102, 0.12);
+	border-color: rgba(37, 211, 102, 0.35);
+	color: #25d366;
+}
+
+.wa-btn:hover {
+	background: #25d366;
+	color: #000814;
+	box-shadow: 0 0 12px rgba(37, 211, 102, 0.4);
+}
+
+.copy-phone-btn,
+.copy-btn {
+	background: rgba(255, 255, 255, 0.06);
+	border-color: rgba(255, 255, 255, 0.15);
+	color: #cbd5e1;
+}
+
+.copy-btn:hover {
+	background: rgba(255, 255, 255, 0.15);
+	color: #ffffff;
+}
+
+.leader-separator {
+	height: 1px;
+	background: rgba(0, 234, 255, 0.1);
+	margin: 2px 0;
+}
+
+/* Interactive Dispatcher Terminal */
+.contact-terminal-box {
+	max-width: 1200px;
+	margin: 0 auto;
+	background: rgba(0, 14, 30, 0.9);
+	border: 1px solid rgba(0, 234, 255, 0.3);
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+	position: relative;
+	z-index: 2;
+}
+
+.terminal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 18px;
+	background: rgba(0, 8, 20, 0.95);
+	border-bottom: 1px solid rgba(0, 234, 255, 0.18);
+}
+
+.terminal-dots {
+	display: flex;
+	gap: 6px;
+}
+
+.terminal-dots .dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+.terminal-dots .dot.red { background: #ff5f56; }
+.terminal-dots .dot.yellow { background: #ffbd2e; }
+.terminal-dots .dot.green { background: #27c93f; }
+
+.terminal-title {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: #cbd5e1;
+}
+
+.terminal-status {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 0.78rem;
+	color: #00eaff;
+	font-weight: 600;
+}
+
+.pulse-indicator {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #00eaff;
+	box-shadow: 0 0 8px #00eaff;
+	animation: radarPing 1.5s infinite;
+}
+
+.terminal-form {
+	padding: clamp(18px, 3vmin, 26px);
+}
+
+.terminal-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+	gap: 16px;
+}
+
+.terminal-field label {
+	display: block;
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #94a3b8;
+	margin-bottom: 6px;
+}
+
+.terminal-field input,
+.terminal-field select,
+.terminal-field textarea {
+	width: 100%;
+	background: rgba(0, 6, 16, 0.8);
+	border: 1px solid rgba(0, 234, 255, 0.25);
+	border-radius: 8px;
+	color: #ffffff;
+	padding: 10px 14px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 0.92rem;
+	transition: all 0.2s ease;
+}
+
+.terminal-field input:focus,
+.terminal-field select:focus,
+.terminal-field textarea:focus {
+	outline: none;
+	border-color: var(--cyan-glow);
+	box-shadow: 0 0 14px rgba(0, 234, 255, 0.3);
+	background: rgba(0, 10, 24, 0.95);
+}
+
+.terminal-submit-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 14px;
+	margin-top: 18px;
+	padding-top: 14px;
+	border-top: 1px solid rgba(0, 234, 255, 0.1);
+}
+
+.terminal-send-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: linear-gradient(135deg, #00b4d8, #0077b6);
+	border: 1px solid rgba(0, 234, 255, 0.4);
+	color: #ffffff;
+	padding: 10px 22px;
+	border-radius: 8px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-weight: 600;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+}
+
+.terminal-send-btn:hover {
+	background: linear-gradient(135deg, #00eaff, #0096c7);
+	color: #000814;
+	box-shadow: 0 0 20px rgba(0, 234, 255, 0.5);
+	transform: translateY(-2px);
+}
+
+.terminal-hint {
+	font-size: 0.8rem;
+	color: #64748b;
+}
+
+/* Cyber Toast Popup */
+.contact-toast {
+	position: fixed;
+	bottom: 28px;
+	right: 28px;
+	background: rgba(0, 16, 36, 0.96);
+	border: 1px solid var(--cyan-glow);
+	color: #ffffff;
+	padding: 12px 20px;
+	border-radius: 10px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 234, 255, 0.4);
+	z-index: 999999;
+	opacity: 0;
+	transform: translateY(20px);
+	pointer-events: none;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-toast.show {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+}
+
+/* Social link buttons */
+.social-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 14px;
+	border-radius: 8px;
+	background: rgba(0, 234, 255, 0.05);
+	border: 1px solid rgba(0, 234, 255, 0.15);
+	transition: all 0.25s ease;
+}
+
+.social-link:hover {
+	background: rgba(0, 234, 255, 0.15);
+	border-color: var(--cyan-glow);
+	box-shadow: 0 0 15px rgba(0, 234, 255, 0.3);
+	transform: translateY(-2px);
+}
+
+.social-icon {
+	font-size: 1.1rem;
+}
+
+/* ============================================================
+   SOCIAL LINKS FOOTER
+   ============================================================ */
+.transparent3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background: rgba(0, 162, 255, 0.08);
+	width: 100%;
+	padding: clamp(12px, 2vmin, 24px) 1rem;
+	border-top: 1px solid rgba(0, 225, 255, 0.25);
+}
+
+.transparent3 ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: clamp(16px, 5vw, 60px);
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.transparent3 li {
+	font-family: 'Oswald', sans-serif;
+	font-size: clamp(12px, 2.3vmin, 17px);
+	color: white;
+	transition: transform 0.3s ease;
+}
+
+.transparent3 li:hover {
+	transform: scale(1.12);
+}
+
+.transparent3 a {
+	text-decoration: none;
+	color: var(--cyan-glow);
+	transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.transparent3 a:hover {
+	color: #fff;
+	text-shadow: 0 0 10px var(--cyan-glow), 0 0 20px var(--cyan-glow);
+}
+
+/* ============================================================
+   SCROLL-REVEAL UTILITY
+   ============================================================ */
+.reveal {
+	opacity: 0;
+	transform: translateY(36px);
+	transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Gallery tiles cascade in rather than all snapping in together. Kept off the
+   contact cards, whose own hover transition would inherit the delay. */
+.grid-item:nth-child(2) {
+	transition-delay: 0.08s;
+}
+
+.grid-item:nth-child(3) {
+	transition-delay: 0.16s;
+}
+
+.grid-item:nth-child(4) {
+	transition-delay: 0.24s;
+}
+
+.grid-item:nth-child(5) {
+	transition-delay: 0.32s;
+}
+
+.grid-item:nth-child(6) {
+	transition-delay: 0.4s;
+}
+
+/* ============================================================
+   ANIMATION KEYFRAMES
+   ============================================================ */
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-24px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes glowPulse {
+	0% {
+		box-shadow: 0 0 5px var(--cyan-glow), 0 0 10px var(--cyan-glow);
+	}
+
+	50% {
+		box-shadow: 0 0 16px var(--cyan-glow), 0 0 28px var(--cyan-glow);
+	}
+
+	100% {
+		box-shadow: 0 0 5px var(--cyan-glow), 0 0 10px var(--cyan-glow);
+	}
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+/* Tablet */
+@media (max-width: 768px) {
+	.flex-wrapper {
+		padding-top: clamp(70px, 16vh, 120px);
+	}
+
+	.grppic,
+	.workshop_event_pic {
+		background-attachment: scroll;
+		/* parallax off on tablet */
+		height: clamp(160px, 40vw, 280px);
+	}
+
+	.grid-container {
+		padding: 0 clamp(8px, 3vw, 24px);
+	}
+
+	.transparent3 ul {
+		gap: clamp(12px, 6vw, 40px);
+	}
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+	:root {
+		--nav-h: 60px;
+	}
+
+	.button-container_index {
+		min-height: 45vh;
+	}
+
+	.btn-primary {
+		width: clamp(200px, 85vw, 360px);
+		height: 58px;
+		font-size: 1rem;
+	}
+
+	.flex-wrapper {
+		padding: 75px 4vw 0;
+	}
+
+	.flex-wrapper2 {
+		padding: 20px 4vw 0;
+	}
+
+	#head {
+		font-size: clamp(16px, 5.5vmin, 24px);
+		padding: 0.75rem 1rem 0.75rem;
+	}
+
+	#quote {
+		font-size: clamp(12px, 3.5vmin, 15px);
+	}
+
+	#quoteauth {
+		font-size: clamp(11px, 3vmin, 14px);
+	}
+
+	.animateLogo {
+		padding: 60px 0 30px;
+	}
+
+	#logo {
+		width: clamp(140px, 55vw, 220px);
+	}
+
+	.topTriangle,
+	.topTriangle-withoutTransparencychange,
+	.bottomTriangle {
+		border-top-width: 12vw;
+		border-bottom-width: 12vw;
+	}
+
+	.topflipTriangle,
+	.bottomflipTriangle,
+	.topflipTriangle2,
+	.bottomflipTriangle2 {
+		border-top-width: 12vw;
+		border-bottom-width: 12vw;
+	}
+
+	.About {
+		padding: 0 5vw 1.5rem;
+	}
+
+	.grppic,
+	.workshop_event_pic {
+		background-attachment: scroll;
+		height: clamp(140px, 45vw, 240px);
+	}
+
+	.gallery h1 {
+		font-size: clamp(24px, 7vmin, 36px);
+	}
+
+	.up1,
+	.up2,
+	.up3,
+	.up4,
+	.up5,
+	.up6 {
+		height: clamp(160px, 55vw, 280px);
+	}
+
+	.desc1,
+	.desc2,
+	.desc3,
+	.desc4,
+	.desc5,
+	.desc6 {
+		font-size: clamp(12px, 3.5vmin, 16px);
+	}
+
+	#contact {
+		padding: 28px 5vw 28px;
+	}
+
+	#add h1,
+	#lec h1,
+	#team h1 {
+		font-size: clamp(15px, 4.5vmin, 22px);
+	}
+
+	#add p,
+	#lec p,
+	#team p {
+		font-size: clamp(12px, 3.5vmin, 15px);
+	}
+
+	#prakash img,
+	#srikanth img {
+		width: clamp(60px, 18vmin, 90px);
+		height: clamp(60px, 18vmin, 90px);
+	}
+
+	.transparent3 li {
+		font-size: clamp(11px, 3.5vmin, 15px);
+	}
+
+	.transparent3 ul {
+		gap: clamp(10px, 6vw, 28px);
+	}
+}
+
+/* Make Bootstrap collapse animation smoother and faster on mobile */
+.collapsing {
+	transition: height 0.15s ease-out !important;
+}
+
+@media (max-width: 420px) {
+	.topTriangle,
+	.topTriangle-withoutTransparencychange,
+	.bottomTriangle,
+	.topflipTriangle,
+	.bottomflipTriangle {
+		border-top-width: 10vw;
+		border-bottom-width: 10vw;
+	}
+	#logo {
+		width: clamp(120px, 50vw, 180px);
+	}
+	.contact-actions-cluster {
+		flex-direction: column;
+	}
+	.contact-btn {
+		width: 100%;
+	}
+	.terminal-submit-row {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.terminal-send-btn {
+		width: 100%;
+		justify-content: center;
+	}
+}
