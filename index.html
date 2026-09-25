@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<title>Robotics Club, NIE — The National Institute of Engineering, Mysuru</title>
+	<meta name="description"
+		content="The Robotics Club of The National Institute of Engineering, Mysuru — an interdisciplinary student club building robotics and automation projects, running workshops, and hosting the annual Roborikishi tech fest." />
+	<meta http-equiv="Content-Security-Policy"
+		content="default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval';">
+	<meta name="keywords" content="Robotics, club, NIE, Roborikishi, Mysuru, automation, robotics club" />
+	<link rel="canonical" href="https://roboticsclubnie.in/" />
+
+	<!-- Social preview -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Robotics Club, NIE" />
+	<meta property="og:title" content="Robotics Club, NIE" />
+	<meta property="og:description"
+		content="An interdisciplinary student robotics club at The National Institute of Engineering, Mysuru." />
+	<meta property="og:url" content="https://roboticsclubnie.in/" />
+	<meta property="og:image" content="https://roboticsclubnie.in/assets/Header_logo.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<link rel="icon" type="image/png" href="assets/Header_logo_32.png">
+	<link rel="preload" as="image" href="images/carousel/L1.JPG" fetchpriority="high">
+
+	<!-- Fonts: Sono + Oswald + Space Grotesk in a single request -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Sono:wght@200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<!-- Shared theme foundation (must load before the page stylesheet) -->
+	<link rel="stylesheet" href="theme.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="index.css?v=contact2">
+
+	<!-- JS-off fallback. index.css holds every .reveal element at opacity 0 and
+	     index.js adds .visible as each one scrolls into view. Ten elements — the
+	     whole About section and the entire Gallery grid — carry class="reveal"
+	     directly in the markup, so without scripting they stayed invisible
+	     permanently. This drops them straight to their finished state. The
+	     preloader already self-dismisses via CSS animation for the same reason. -->
+	<noscript>
+		<style>
+			.reveal {
+				opacity: 1 !important;
+				transform: none !important;
+			}
+		</style>
+	</noscript>
+</head>
+
+<body>
+
+	<!-- Preloader -->
+	<div class="preloader" id="preloader" aria-hidden="true">
+		<img id="preloader-logo" src="images/Logo.png" width="666" height="375" decoding="async" alt="">
+	</div>
+
+	<a class="skip-link" href="#About">Skip to main content</a>
+
+	<!-- navbar-scroller -->
+	<a href="recruitment.html" class="navbanner">
+		<p>🚀 Robotics Club NIE Member Recruitment 2026 is LIVE! Join our team today! <span
+				class="nav-separator">|</span> ⚡ Click here to register &rarr; <span class="nav-separator">|</span> 🤖
+			Welcoming all engineering branches!</p>
+	</a>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg" id="custom-navbar">
+		<a id="navlogo" href="index.html" aria-label="Robotics Club NIE — home">
+			<img src="images/Logo.png" width="666" height="375" alt="Robotics Club NIE logo">
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span><img src="images/ham_menu.png" width="24" height="24" alt="" loading="lazy"></span>
+		</button>
+		<div class="navitems collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav" id="unlist">
+				<li>
+					<a class="animate__animated animate__fadeInUp active" href="index.html" aria-current="page">Home</a>
+				</li>
+				<li>
+					<a class="animate__animated animate__fadeInUp" href="recruitment.html">Recruitment</a>
+				</li>
+				<li>
+					<a class="animate__animated animate__fadeInUp" href="rikishi.html">Roborikishi</a>
+				</li>
+				<li>
+					<a class="animate__animated animate__fadeInUp" href="#Gallery">Gallery</a>
+				</li>
+				<li>
+					<a class="animate__animated animate__fadeInUp" href="Project.html">Projects</a>
+				</li>
+				<li>
+					<a class="animate__animated animate__fadeInUp" href="alumni.html">Alumni</a>
+				</li>
+				<li>
+					<a class="animate__animated animate__fadeInUp" href="#contact">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Hero CTA -->
+	<div class="button-container_index">
+		<div class="roborikishi-banner-wrapper">
+			<a href="recruitment.html" class="btn btn-primary" target="_self">Recruitment 2026</a>
+		</div>
+	</div>
+
+	<!-- Intro -->
+	<div id="intro">
+		<div class="flex-wrapper">
+			<div id="club" class="animate__animated animate__fadeInUp ">
+				<div class="headquote">
+					<div class="head">
+						<p id="head">Robotics Club @ NIE</p>
+					</div>
+					<div class="QMark">
+						<img id="QMark" src="images/QuotationMark2.png" width="1522" height="1284" loading="lazy"
+							alt="">
+					</div>
+				</div>
+				<div class="contents">
+					<p id="quote">
+						At bottom, Robotics is about us. It is the Discipline of emulating our lives, of wondering how
+						we work.
+					</p>
+					<p id="quoteauth">— Rod Grupen</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex-wrapper2 animate__animated animate__fadeInUp ">
+			<div id="carouselIndicators" class="carousel slide images custom-resize" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"
+						aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+						aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+						aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active item">
+						<img src="images/carousel/L1.JPG" class="d-block w-100 custom-image" width="1600"
+							height="1067" alt="Line follower robots competing at a Robotics Club NIE event"
+							fetchpriority="high" decoding="async">
+					</div>
+					<div class="carousel-item">
+						<img src="images/carousel/IMG_6110.JPG" class="d-block w-100 custom-image" width="1600"
+							height="1067" alt="Robotics Club NIE members at the Robo-Expo" loading="lazy"
+							decoding="async">
+					</div>
+					<div class="carousel-item">
+						<img src="images/carousel/IMG_6107.JPG" class="d-block w-100 custom-image" width="1600"
+							height="1067" alt="Projects on display at the Robotics Club NIE expo" loading="lazy"
+							decoding="async">
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="animateLogo">
+			<img id="logo" src="images/logo1.png" width="400" height="182" alt="Robotics Club NIE animated logo">
+		</div>
+
+		<div class="topTriangle-withoutTransparencychange"></div>
+	</div>
+
+	<!-- About Section -->
+	<div class="About reveal" id="About">
+		<div class="title">
+			<h1>About Us</h1>
+		</div>
+		<div class="separator"></div>
+		<div class="textbox_pax">
+			<p>
+				The Robotics Club, NIE is one of its kind interdisciplinary technical clubs of The National Institute of
+				Engineering, Mysuru. Along with our diversity, we share a common passion for robotics. We take up
+				socio-academic projects and try to solve the daily life problems in the society providing innovative
+				solutions through our continuous dedicated work in the field of robotics and automation. We believe that
+				robotics and automation lower the risk of human error and adds intelligence to the system.
+				Being a student club, under The Mechanical Engineering Department, NIE. We welcome everyone, with or
+				without prior knowledge of Robotics, to be a part of our ROBO family. The club offers indispensable
+				professional guidance and workshops along with tools, components, and workspace. Our target is to
+				transform members of our club into creative and technically strong engineers capable of solving various
+				global challenges. The Robotics Club, NIE is making a difference by allowing students to learn about
+				engineering and robotics with hands-on experience.
+			</p>
+		</div>
+	</div>
+
+	<div class="grppic">
+		<div class="bottomTriangle"></div>
+		<div class="transparent"></div>
+		<div class="topTriangle"></div>
+	</div>
+
+	<div class="About reveal">
+		<div class="title">
+			<h1>What we do</h1>
+		</div>
+		<div class="separator"></div>
+		<div class="textbox_pax">
+			<p>
+				We participate in various recognized competitions and tech-fests hosted by top technical institutes all
+				across the country. Unlike many other student teams, we're not focused on any one particular contest: we
+				continually evolve by finding exciting new opportunities for challenge. We are grateful to all our
+				members who have made us proud in all these events.
+				Here, we explore exciting new technologies, learn critical skills, and believe that power is gained by
+				sharing knowledge and not by hoarding it. We encourage this by conducting numerous workshops on various
+				topics that are of current and future relevance in the field of robotics and automation.
+			</p>
+		</div>
+	</div>
+
+	<div class="workshop_event_pic">
+		<div class="bottomTriangle"></div>
+		<div class="transparent"></div>
+		<div class="topflipTriangle" id="Gallery"></div>
+	</div>
+
+	<!-- Gallery Section -->
+	<div class="gallery">
+		<h1 class="reveal">Gallery</h1>
+		<div class="gallery-separator reveal"></div>
+		<div class="grid-container row">
+
+			<div class="grid-item col-md-6 col-sm-12 reveal">
+				<a href="rikishi.html">
+					<div class="up1">
+						<div class="gallery-card-badge"><span class="badge-dot"></span> Flagship Fest</div>
+						<img src="images/gallery/roborikishi.JPG" width="1200" height="800"
+							alt="Competitors and spectators around the arena at Roborikishi" loading="lazy"
+							decoding="async">
+						<div class="desc1">
+							<p>Roborikishi is the annual national-level robotics fest conducted by the club every year
+								at NIE.</p>
+							<span class="gallery-explore-tag">Explore Fest &rarr;</span>
+						</div>
+					</div>
+				</a>
+				<div class="down1">
+					<h2>Roborikishi</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12 reveal">
+				<a href="workshop.html">
+					<div class="up2">
+						<div class="gallery-card-badge"><span class="badge-dot"></span> Hands-on Learning</div>
+						<img src="assets/workshop/we8.jpeg" width="1080" height="593"
+							alt="School students and club volunteers with a certificate after an outreach workshop"
+							loading="lazy" decoding="async">
+						<div class="desc2">
+							<p>Technical workshops covering microcontrollers, wireless protocols, sensor integration,
+								and automation.</p>
+							<span class="gallery-explore-tag">View Workshops &rarr;</span>
+						</div>
+					</div>
+				</a>
+				<div class="down2">
+					<h2>Workshops &amp; Events</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12 reveal">
+				<a href="competition.html">
+					<div class="up3">
+						<div class="gallery-card-badge"><span class="badge-dot"></span> National Arena</div>
+						<img src="assets/competition/competition1.jpeg" width="1280" height="786"
+							alt="Two club members holding up the off-road robots they built for the competition"
+							loading="lazy" decoding="async">
+						<div class="desc3">
+							<p>Robotics Club NIE represents our college in major inter-collegiate tech competitions and
+								combats.</p>
+							<span class="gallery-explore-tag">View Competitions &rarr;</span>
+						</div>
+					</div>
+				</a>
+				<div class="down3">
+					<h2>Competitions</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12 reveal">
+				<a href="Project.html">
+					<div class="up4">
+						<div class="gallery-card-badge"><span class="badge-dot"></span> R&amp;D Innovation</div>
+						<img src="images/gallery/project.JPG" width="1200" height="800" alt="Projects"
+							loading="lazy">
+						<div class="desc4">
+							<p>Members research, design, and manufacture autonomous bots, mechanical rovers, and IoT
+								devices.</p>
+							<span class="gallery-explore-tag">Explore Projects &rarr;</span>
+						</div>
+					</div>
+				</a>
+				<div class="down4">
+					<h2>Projects</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12 reveal">
+				<a href="alumni.html#core">
+					<div class="up5">
+						<div class="gallery-card-badge"><span class="badge-dot"></span> Club Leadership</div>
+						<img src="images/gallery/core.jpeg" width="1040" height="720"
+							alt="The 2025 core team seated on the steps outside the electronics block" loading="lazy"
+							decoding="async">
+						<div class="desc5">
+							<p>A passionate student-led team coordinating technical developments, build sessions, and
+								mentorship.</p>
+							<span class="gallery-explore-tag">Meet Core Team &rarr;</span>
+						</div>
+					</div>
+				</a>
+				<div class="down5">
+					<h2>Core Team</h2>
+				</div>
+			</div>
+
+			<div class="grid-item col-md-6 col-sm-12 reveal">
+				<a href="alumni.html">
+					<div class="up6">
+						<div class="gallery-card-badge"><span class="badge-dot"></span> Mentors &amp; Alumni</div>
+						<img src="images/gallery/alumni.JPG" width="1200" height="800" alt="Alumni" loading="lazy">
+						<div class="desc6">
+							<p>Distinguished alumni who continue to support the club with expertise, hardware grants,
+								and career mentorship.</p>
+							<span class="gallery-explore-tag">View Alumni Network &rarr;</span>
+						</div>
+					</div>
+				</a>
+				<div class="down6">
+					<h2>Alumni</h2>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="before-contactUs">
+		<div class="bottomflipTriangle2"></div>
+		<div class="transparent2"></div>
+		<div class="topflipTriangle2"></div>
+	</div>
+
+	<!-- Contact Section -->
+	<section id="contact" aria-label="Contact and Location Information">
+		<div class="contact-header-wrap">
+			<div class="contact-badge"><span class="badge-dot"></span> Get In Touch &bull; 24/7 Connect</div>
+			<h1 id="contact-heading">CONTACT US</h1>
+			<p class="contact-subheading">
+				Connect with our student leadership, consult faculty mentors, or drop by our campus robotics lab.
+			</p>
+		</div>
+
+		<div id="left">
+			<!-- 1. Address & Campus Card -->
+			<div id="add" class="contact-card">
+				<div class="contact-card-header">
+					<span class="contact-icon">📍</span>
+					<h2 class="heading">Campus Lab</h2>
+				</div>
+				<div class="contact-card-content">
+					<p class="contact-org-title"><strong>Robotics Club, NIE</strong></p>
+					<p class="contact-address-text">
+						The National Institute of Engineering (NIE)<br>
+						South Campus, Mananthavadi Road<br>
+						Mysuru, Karnataka – 570008
+					</p>
+
+					<!-- HUD Coordinates & Live Ping -->
+					<div class="contact-hud-status">
+						<span class="hud-ping-dot"></span>
+						<span class="hud-coords">12.2842° N, 76.6413° E</span>
+						<span class="hud-tag">Active Lab</span>
+					</div>
+
+					<!-- Interactive Action Buttons -->
+					<div class="contact-actions-cluster">
+						<a href="https://maps.google.com/?q=The+National+Institute+of+Engineering+Mananthavadi+Road+Mysore+570008"
+							target="_blank" rel="noopener" class="contact-btn contact-btn-primary" id="btnOpenMaps">
+							<span>🗺️ Open Maps</span>
+							<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+								stroke-width="2">
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+								<polyline points="15 3 21 3 21 9"></polyline>
+								<line x1="10" y1="14" x2="21" y2="3"></line>
+							</svg>
+						</a>
+						<button type="button" class="contact-btn contact-btn-ghost copy-btn" id="btnCopyAddress"
+							data-copy="Robotics Club, The National Institute of Engineering, Mananthavadi Road, Mysuru - 570008">
+							<span>📋 Copy</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 2. Faculty Mentors Card -->
+			<div id="lec" class="contact-card">
+				<div class="contact-card-header">
+					<span class="contact-icon">🎓</span>
+					<h2>Faculty Advisors</h2>
+				</div>
+				<div class="ims faculty-grid">
+					<div id="prakash" class="faculty-profile">
+						<div class="faculty-avatar-wrap">
+							<img src="assets/faculty/prakash.JPG" width="400" height="400" loading="lazy"
+								decoding="async" alt="Dr. Prakash K R">
+							<span class="faculty-glow-ring"></span>
+						</div>
+						<div class="faculty-details">
+							<h3>Dr. Prakash K R</h3>
+							<span class="faculty-role-badge">Professor</span>
+							<p class="faculty-dept">Mechanical Engineering</p>
+						</div>
+					</div>
+					<div id="srikanth" class="faculty-profile">
+						<div class="faculty-avatar-wrap">
+							<img src="assets/faculty/srikant.jpg" width="400" height="400" loading="lazy"
+								decoding="async" alt="Mr. Srikanth N S">
+							<span class="faculty-glow-ring"></span>
+						</div>
+						<div class="faculty-details">
+							<h3>Mr. Srikanth N S</h3>
+							<span class="faculty-role-badge">Assistant Professor</span>
+							<p class="faculty-dept">Electrical & Electronics</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 3. Core Leadership / Captains Card -->
+			<div id="team" class="contact-card">
+				<div class="contact-card-header">
+					<span class="contact-icon">⚡</span>
+					<h2>Contact Core</h2>
+				</div>
+				<div class="core-leaders-wrap">
+					<!-- Captain -->
+					<div class="leader-item">
+						<div class="leader-info">
+							<div class="leader-name-row">
+								<h3>Arya B N</h3>
+								<span class="leader-badge captain-badge">Captain</span>
+							</div>
+							<a href="tel:+918762466506" class="leader-phone-link">
+								<span class="phone-icon">📞</span> +91 8762466506
+							</a>
+						</div>
+						<div class="leader-action-bar">
+							<a href="tel:+918762466506" class="leader-btn call-btn" title="Call Arya">
+								<span>Call</span>
+							</a>
+							<a href="https://wa.me/918762466506?text=Hello%20Arya,%20I%20have%20an%20inquiry%20regarding%20Robotics%20Club%20NIE"
+								target="_blank" rel="noopener" class="leader-btn wa-btn" title="WhatsApp Arya">
+								<span>WhatsApp</span>
+							</a>
+							<button type="button" class="leader-btn copy-btn" data-copy="+918762466506"
+								title="Copy phone number">
+								<span>Copy</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="leader-separator"></div>
+
+					<!-- Vice Captain -->
+					<div class="leader-item">
+						<div class="leader-info">
+							<div class="leader-name-row">
+								<h3>Shrilakshmi</h3>
+								<span class="leader-badge vice-captain-badge">Vice Captain</span>
+							</div>
+							<a href="tel:+917204703252" class="leader-phone-link">
+								<span class="phone-icon">📞</span> +91 7204703252
+							</a>
+						</div>
+						<div class="leader-action-bar">
+							<a href="tel:+917204703252" class="leader-btn call-btn" title="Call Shrilakshmi">
+								<span>Call</span>
+							</a>
+							<a href="https://wa.me/917204703252?text=Hello%20Shrilakshmi,%20I%20have%20an%20inquiry%20regarding%20Robotics%20Club%20NIE"
+								target="_blank" rel="noopener" class="leader-btn wa-btn" title="WhatsApp Shrilakshmi">
+								<span>WhatsApp</span>
+							</a>
+							<button type="button" class="leader-btn copy-btn" data-copy="+917204703252"
+								title="Copy phone number">
+								<span>Copy</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Interactive Quick Message & Inquiry Terminal -->
+		<div class="contact-terminal-box">
+			<div class="terminal-header">
+				<div class="terminal-dots">
+					<span class="dot red"></span>
+					<span class="dot yellow"></span>
+					<span class="dot green"></span>
+				</div>
+				<div class="terminal-title">📡 Quick Message Dispatcher</div>
+				<div class="terminal-status"><span class="pulse-indicator"></span> Ready</div>
+			</div>
+			<form id="quickContactForm" class="terminal-form">
+				<div class="terminal-grid">
+					<div class="terminal-field">
+						<label for="qcName">Your Name</label>
+						<input type="text" id="qcName" placeholder="Enter your full name" required>
+					</div>
+					<div class="terminal-field">
+						<label for="qcEmail">Email or Contact</label>
+						<input type="text" id="qcEmail" placeholder="your.email@nie.ac.in or phone" required>
+					</div>
+					<div class="terminal-field">
+						<label for="qcSubject">Inquiry Category</label>
+						<select id="qcSubject">
+							<option value="General Club Query">General Club Query</option>
+							<option value="Recruitment 2026 Question">Recruitment 2026 Question</option>
+							<option value="Workshop & Training Inquiry">Workshop & Training Inquiry</option>
+							<option value="Sponsorship & Tech Fest">Sponsorship & Tech Fest</option>
+							<option value="Project Collaboration">Project Collaboration</option>
+						</select>
+					</div>
+				</div>
+				<div class="terminal-field mt-3">
+					<label for="qcMessage">Message</label>
+					<textarea id="qcMessage" rows="3"
+						placeholder="Tell us what you'd like to collaborate or ask about..." required></textarea>
+				</div>
+				<div class="terminal-submit-row">
+					<button type="submit" class="terminal-send-btn" id="btnDispatchMessage">
+						<span>⚡ Dispatch Email Message</span>
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2">
+							<line x1="22" y1="2" x2="11" y2="13"></line>
+							<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+						</svg>
+					</button>
+					<span class="terminal-hint">Opens directly in your mail client addressed to
+						roboticsclubnie@nie.ac.in</span>
+				</div>
+			</form>
+		</div>
+
+		<!-- Toast Notification Container -->
+		<div id="contactToast" class="contact-toast" role="status" aria-live="polite"></div>
+	</section>
+
+	<!-- Social Links -->
+	<div class="transparent3">
+		<ul>
+			<li>
+				<a href="mailto:roboticsclubnie@nie.ac.in" class="social-link" title="Send email">
+					<span class="social-icon">✉️</span>
+					<div class="social">roboticsclubnie@nie.ac.in</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://instagram.com/roboticsclub_nie" target="_blank" rel="noopener" class="social-link"
+					title="Visit Instagram">
+					<span class="social-icon">📸</span>
+					<div class="social">@roboticsclub_nie</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/roboticsclub-nie" target="_blank" rel="noopener" class="social-link"
+					title="Visit GitHub">
+					<span class="social-icon">💻</span>
+					<div class="social">roboticsclub-nie</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Bootstrap JS (bundle includes Popper; drives the carousel) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	<!-- Custom JS -->
+	<script src="index.js?v=contact2"></script>
+</body>
+
+</html>
